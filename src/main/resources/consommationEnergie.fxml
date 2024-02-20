@@ -42,8 +42,35 @@
                   <Slider prefHeight="58.0" prefWidth="399.0" />
                   <Label prefHeight="57.0" prefWidth="28.0" text="nb" />
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="135.0" text="Temps :">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Label prefHeight="26.0" prefWidth="28.0" text="h" />
+                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Label prefHeight="25.0" prefWidth="28.0" text="min" />
+                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Label prefHeight="25.0" prefWidth="28.0" text="sec" />
+               </children></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="150.0" text="Fréquence :">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ChoiceBox prefWidth="150.0" />
+               </children></HBox>
          </children>
       </GridPane>
    </center>
