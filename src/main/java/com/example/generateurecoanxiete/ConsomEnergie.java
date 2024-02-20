@@ -7,11 +7,11 @@ import java.util.Objects;
 public class ConsomEnergie {
 
 
-    public double heureMinSecEnSec(double heure, double minute, double seconde){
+    public long heureMinSecEnSec(long heure, long minute, long seconde){
         return heure * 3600 + minute * 60 + seconde;
     }
 
-    public String secEnHeureMinSec(double tempsAmpoule){
+    public String secEnHeureMinSec(long tempsAmpoule){
         int heure = 0;
         int minute = 0;
         int seconde = 0;
@@ -34,28 +34,28 @@ public class ConsomEnergie {
         return heure + " h " + minute + " min " + seconde + " sec";
     }
 
-    public double calculTempsAmpoule(double puissanceApp, double tempsAllum, String frequence){
+    public long calculTempsAmpoule(long puissanceApp, long tempsAllum, String frequence){
         double energieConsommee = puissanceApp * tempsAllum;
         if(Objects.equals(frequence, "Une fois par jour"))
-            return (energieConsommee / 60) * 365.25;
+            return (long) ((energieConsommee / 60) * 365.25);
         else if(Objects.equals(frequence, "Deux fois par jour"))
-            return (energieConsommee / 60) * 730.5;
+            return (long) ((energieConsommee / 60) * 730.5);
         else if(Objects.equals(frequence, "Une fois par semaine"))
-            return (energieConsommee / 60) * 52.18;
+            return (long) ((energieConsommee / 60) * 52.18);
         else if(Objects.equals(frequence, "Deux fois par semaine"))
-            return (energieConsommee / 60) * 104.36;
+            return (long) ((energieConsommee / 60) * 104.36);
         else if(Objects.equals(frequence, "Une fois par mois"))
-            return (energieConsommee / 60) * 30.44;
+            return (long) ((energieConsommee / 60) * 30.44);
         else if(Objects.equals(frequence, "Deux fois par mois"))
-            return (energieConsommee / 60) * 68.88;
+            return (long) ((energieConsommee / 60) * 68.88);
         else if(Objects.equals(frequence, "Deux fois par année"))
-            return (energieConsommee / 60) * 2;
+            return (long) ((energieConsommee / 60) * 2);
         else if(Objects.equals(frequence, "Trois fois par année"))
-            return (energieConsommee / 60) * 3;
+            return (long) ((energieConsommee / 60) * 3);
         else if(Objects.equals(frequence, "Quatre fois par année"))
-            return (energieConsommee / 60) * 4;
+            return (long) ((energieConsommee / 60) * 4);
         else
-            return energieConsommee / 60;
+            return (long) (energieConsommee / 60);
     }
 
 
