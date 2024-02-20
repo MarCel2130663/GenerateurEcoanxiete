@@ -1,8 +1,11 @@
 package com.example.generateurecoanxiete;
 
+import javafx.fxml.FXML;
+
 import java.util.Objects;
 
 public class ConsomEnergie {
+
 
     public double heureMinSecEnSec(double heure, double minute, double seconde){
         return heure * 3600 + minute * 60 + seconde;
@@ -11,22 +14,22 @@ public class ConsomEnergie {
     public String secEnHeureMinSec(double tempsAmpoule){
         int heure = 0;
         int minute = 0;
-        int seconde;
+        int seconde = 0;
         if(tempsAmpoule >= 3600){
             heure = (int) Math.floor(tempsAmpoule / 3600);
             if(tempsAmpoule % 3600 > 60){
                 minute = (int) Math.floor((tempsAmpoule % 3600) / 60);
-                seconde = (int) ((tempsAmpoule % 3600) / 60 - minute) * 60;
+                seconde = (int) Math.round(((tempsAmpoule % 3600) / 60 - minute) * 60);
             }
             else{
-                seconde = (int) tempsAmpoule;
+                seconde = (int) tempsAmpoule % 3600;
             }
         }
         else if(tempsAmpoule >= 60){
             minute = (int) Math.floor(tempsAmpoule / 60);
             seconde = (int) ((tempsAmpoule % 3600) / 60 - minute) * 60;
         }
-        else
+        else if(tempsAmpoule < 60)
             seconde = (int) tempsAmpoule;
         return heure + " h " + minute + " min " + seconde + " sec";
     }
@@ -35,6 +38,8 @@ public class ConsomEnergie {
         double energieConsommee = puissanceApp * tempsAllum;
         if(Objects.equals(frequence, "Une fois par jour"))
             return (energieConsommee / 60) * 365.25;
+        else if(Objects.equals(frequence, "Deux fois par jour"))
+            return (energieConsommee / 60) * 730.5;
         else if(Objects.equals(frequence, "Une fois par semaine"))
             return (energieConsommee / 60) * 52.18;
         else if(Objects.equals(frequence, "Deux fois par semaine"))
