@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
         ConsomEnergie convertEnergie = new ConsomEnergie();
         DeplacementsEnArbres convertArbres = new DeplacementsEnArbres();
 
-        System.out.println("Temps durant lequel une ampoule de 60 W restera allumee (sec) : " + convertEnergie.calculTempsAmpoule(120, convertEnergie.heureMinSecEnSec(0, 15, 40), "Deux fois par jour"));
+        System.out.println("Temps durant lequel une ampoule de 60 W restera allumee (sec) : " + convertEnergie.calculTempsAmpoule(75, convertEnergie.heureMinSecEnSec(0, 15, 15), "Deux fois par jour"));
         System.out.println("Temps durant lequel une ampoule de 60 W restera allumee : " +
                 convertEnergie.secEnHeureMinSec(convertEnergie.calculTempsAmpoule(120, convertEnergie.heureMinSecEnSec(0, 15, 40), "Deux fois par jour")));
 

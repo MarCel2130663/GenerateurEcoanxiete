@@ -7,39 +7,40 @@ import java.util.Objects;
 public class ConsomEnergie {
 
 
-    public long heureMinSecEnSec(long heure, long minute, long seconde){
+    public double heureMinSecEnSec(long heure, long minute, long seconde){
         return heure * 3600 + minute * 60 + seconde;
     }
 
-    public String secEnHeureMinSec(long tempsAmpoule){
-        int heure = 0;
-        int minute = 0;
-        int seconde = 0;
+    public String secEnHeureMinSec(double tempsAmpoule){
+        long heure = 0;
+        long minute = 0;
+        long seconde;
         if(tempsAmpoule >= 3600){
-            heure = (int) Math.floor(tempsAmpoule / 3600);
+            heure = (long) (tempsAmpoule / 3600);
             if(tempsAmpoule % 3600 > 60){
-                minute = (int) Math.floor((tempsAmpoule % 3600) / 60);
-                seconde = (int) Math.round(((tempsAmpoule % 3600) / 60 - minute) * 60);
+                minute = (long) Math.floor((tempsAmpoule % 3600) / 60);
+                seconde = Math.round(((tempsAmpoule % 3600) / 60 - minute) * 60);
             }
             else{
                 seconde = (int) tempsAmpoule % 3600;
             }
         }
         else if(tempsAmpoule >= 60){
-            minute = (int) Math.floor(tempsAmpoule / 60);
-            seconde = (int) ((tempsAmpoule % 3600) / 60 - minute) * 60;
+            minute = (long) Math.floor(tempsAmpoule / 60);
+            seconde = Math.round(((tempsAmpoule % 3600) / 60 - minute) * 60);
         }
-        else if(tempsAmpoule < 60)
-            seconde = (int) tempsAmpoule;
+        else seconde = Math.round(tempsAmpoule);
         return heure + " h " + minute + " min " + seconde + " sec";
     }
 
-    public long calculTempsAmpoule(long puissanceApp, long tempsAllum, String frequence){
+    public double calculTempsAmpoule(long puissanceApp, double tempsAllum, String frequence){
         double energieConsommee = puissanceApp * tempsAllum;
         if(Objects.equals(frequence, "Une fois par jour"))
             return (long) ((energieConsommee / 60) * 365.25);
-        else if(Objects.equals(frequence, "Deux fois par jour"))
+        else if(Objects.equals(frequence, "Deux fois par jour")) {
+            System.out.println((long) ((energieConsommee / 60) * 730.5));
             return (long) ((energieConsommee / 60) * 730.5);
+        }
         else if(Objects.equals(frequence, "Une fois par semaine"))
             return (long) ((energieConsommee / 60) * 52.18);
         else if(Objects.equals(frequence, "Deux fois par semaine"))
