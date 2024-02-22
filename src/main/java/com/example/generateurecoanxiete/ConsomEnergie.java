@@ -1,11 +1,32 @@
 package com.example.generateurecoanxiete;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
 
 import java.util.Objects;
 
 public class ConsomEnergie {
 
+    @FXML
+    Slider slider;
+
+    @FXML
+    Spinner<Integer> spinnerH;
+
+    @FXML
+    Spinner<Integer> spinnerMin;
+
+    @FXML
+    Spinner<Integer> spinnerSec;
+
+    @FXML
+    ChoiceBox<String> choiceBox;
+
+    @FXML
+    Button convertir;
+
+    @FXML
+    Label reponse;
 
     public double heureMinSecEnSec(long heure, long minute, long seconde){
         return heure * 3600 + minute * 60 + seconde;
@@ -22,7 +43,7 @@ public class ConsomEnergie {
                 seconde = Math.round(((tempsAmpoule % 3600) / 60 - minute) * 60);
             }
             else{
-                seconde = (int) tempsAmpoule % 3600;
+                seconde = Math.round(tempsAmpoule % 3600);
             }
         }
         else if(tempsAmpoule >= 60){
@@ -37,18 +58,16 @@ public class ConsomEnergie {
         double energieConsommee = puissanceApp * tempsAllum;
         if(Objects.equals(frequence, "Une fois par jour"))
             return (long) ((energieConsommee / 60) * 365.25);
-        else if(Objects.equals(frequence, "Deux fois par jour")) {
-            System.out.println((long) ((energieConsommee / 60) * 730.5));
+        else if(Objects.equals(frequence, "Deux fois par jour"))
             return (long) ((energieConsommee / 60) * 730.5);
-        }
         else if(Objects.equals(frequence, "Une fois par semaine"))
             return (long) ((energieConsommee / 60) * 52.18);
         else if(Objects.equals(frequence, "Deux fois par semaine"))
             return (long) ((energieConsommee / 60) * 104.36);
         else if(Objects.equals(frequence, "Une fois par mois"))
-            return (long) ((energieConsommee / 60) * 30.44);
+            return (long) ((energieConsommee / 60) * 12);
         else if(Objects.equals(frequence, "Deux fois par mois"))
-            return (long) ((energieConsommee / 60) * 68.88);
+            return (long) ((energieConsommee / 60) * 24);
         else if(Objects.equals(frequence, "Deux fois par année"))
             return (long) ((energieConsommee / 60) * 2);
         else if(Objects.equals(frequence, "Trois fois par année"))
@@ -59,6 +78,11 @@ public class ConsomEnergie {
             return (long) (energieConsommee / 60);
     }
 
+    /*public String convertir(){
+        return secEnHeureMinSec(calculTempsAmpoule(slider, heureMinSecEnSec(spinnerH, spinnerMin, spinnerSec), choiceBox));
+    }
 
-
+    public void label(){
+        label = convertir();
+    }*/
 }
