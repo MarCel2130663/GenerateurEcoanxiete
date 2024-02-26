@@ -92,4 +92,14 @@
    <right>
 
    </right>
+   <top>
+      <VBox prefHeight="105.0" prefWidth="1062.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="49.0" prefWidth="701.0" text="                                                               Consommation d'énergie">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" text="Menu" />
+         </children></VBox>
+   </top>
 </BorderPane>
