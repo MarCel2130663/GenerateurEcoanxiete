@@ -6,15 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <Label prefHeight="66.0" prefWidth="384.0" text="  Consommation d'énergie" textAlignment="CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="30.0" />
-         </font>
-         <graphic>
-         </graphic>
-      </Label>
-   </top>
+
    <left>
       <ImageView fitHeight="612.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </left>
@@ -81,16 +73,23 @@
                      </font>
                   </Button>
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <HBox prefHeight="186.0" prefWidth="513.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
 
-                  <Label prefHeight="45.0" prefWidth="391.0" text="Temps durant lequel un ampoule est allumée :">
+                  <Label prefHeight="45.0" prefWidth="333.0" text="Temps durant lequel un ampoule est allumée :">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
+                  <Label prefHeight="45.0" prefWidth="77.0" text="reponse">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                </children></HBox>
          </children>
       </GridPane>
    </center>
+   <right>
+
+   </right>
 </BorderPane>
