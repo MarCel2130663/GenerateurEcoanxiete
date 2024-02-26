@@ -23,9 +23,6 @@ public class ConsomEnergie {
     ChoiceBox<String> choiceBox;
 
     @FXML
-    Button convertir;
-
-    @FXML
     Label reponse;
 
     public double heureMinSecEnSec(long heure, long minute, long seconde){
@@ -78,11 +75,11 @@ public class ConsomEnergie {
             return (long) (energieConsommee / 60);
     }
 
-    /*public String convertir(){
-        return secEnHeureMinSec(calculTempsAmpoule(slider, heureMinSecEnSec(spinnerH, spinnerMin, spinnerSec), choiceBox));
+    public String convertir(){
+        return secEnHeureMinSec(calculTempsAmpoule((long) slider.getValue(), heureMinSecEnSec(spinnerH.getValue(), spinnerMin.getValue(), spinnerSec.getValue()), choiceBox.getValue()));
     }
 
     public void label(){
-        label = convertir();
-    }*/
+        reponse.setText(convertir());
+    }
 }
