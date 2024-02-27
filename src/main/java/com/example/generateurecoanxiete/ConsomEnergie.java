@@ -1,7 +1,9 @@
 package com.example.generateurecoanxiete;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.converter.NumberStringConverter;
 
 import java.util.Objects;
 
@@ -27,6 +29,11 @@ public class ConsomEnergie {
 
     @FXML
     Label reponse;
+
+    @FXML
+    public void initialize(){
+        Bindings.bindBidirectional(puissance.textProperty(), slider.valueProperty(), new NumberStringConverter());
+    }
 
     public double heureMinSecEnSec(int heure, int minute, int seconde){
         return heure * 3600 + minute * 60 + seconde;
@@ -81,5 +88,6 @@ public class ConsomEnergie {
     public void convertir(){
         reponse.setText(secEnHeureMinSec(calculTempsAmpoule((int) slider.getValue(), heureMinSecEnSec(spinnerH.getValue(), spinnerMin.getValue(), spinnerSec.getValue()), choiceBox.getValue())));
     }
+
 
 }
