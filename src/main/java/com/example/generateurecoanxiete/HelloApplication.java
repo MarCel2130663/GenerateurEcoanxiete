@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
 
         HelloApplication.stage = stage;
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/accueil.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/consommationCarburant.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 811, 1062);
             stage.setTitle("Generateur d'ecoanxiete");
             stage.setScene(scene);

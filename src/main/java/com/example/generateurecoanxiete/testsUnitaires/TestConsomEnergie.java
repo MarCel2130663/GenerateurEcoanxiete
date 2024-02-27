@@ -39,11 +39,11 @@ public class TestConsomEnergie {
     @Test
     public void consomEnergieTest(){
         assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(0, testEnergie.heureMinSecEnSec(7, 59, 59), "Aucune")), ("0 h 0 min 0 sec"));
-        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(100, testEnergie.heureMinSecEnSec(0, 0, 30), "Une fois par jour")), ("5 h 4 min 22 sec"));
+        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(100, testEnergie.heureMinSecEnSec(0, 0, 30), "Une fois par jour")), ("5 h 4 min 23 sec"));
         assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(75, testEnergie.heureMinSecEnSec(0, 15, 15), "Deux fois par jour")), ("232 h 5 min 9 sec"));
-        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(50, testEnergie.heureMinSecEnSec(0, 50, 45), "Une fois par semaine")), ("36 h 46 min 46 sec"));
-        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(25, testEnergie.heureMinSecEnSec(1, 20, 22), "Deux fois par semaine")), ("58 h 14 min 36 sec"));
-        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(2, testEnergie.heureMinSecEnSec(1, 37, 54), "Une fois par mois")), ("0 h 39 min 9 sec"));
+        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(50, testEnergie.heureMinSecEnSec(0, 50, 45), "Une fois par semaine")), ("36 h 46 min 47 sec"));
+        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(25, testEnergie.heureMinSecEnSec(1, 20, 22), "Deux fois par semaine")), ("58 h 14 min 37 sec"));
+        assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(2, testEnergie.heureMinSecEnSec(1, 37, 54), "Une fois par mois")), ("0 h 39 min 10 sec"));
         assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(10, testEnergie.heureMinSecEnSec(3, 0, 23), "Deux fois par mois")), ("12 h 1 min 32 sec"));
         assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(35, testEnergie.heureMinSecEnSec(2, 5, 0), "Deux fois par année")), ("2 h 25 min 50 sec"));
         assertEquals(testEnergie.secEnHeureMinSec(testEnergie.calculTempsAmpoule(85, testEnergie.heureMinSecEnSec(0, 0, 0), "Trois fois par année")), ("0 h 0 min 0 sec"));

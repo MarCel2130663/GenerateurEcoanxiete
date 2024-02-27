@@ -93,8 +93,26 @@
                </children></HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Label prefHeight="39.0" prefWidth="431.0" text="Temps durant lequel une ampoule de 60W doit rester allumée pour correspondre à l'énergie consommée par l'appareil après un an :" />
-                  <Label fx:id="reponse" prefHeight="50.0" prefWidth="500.0" />
+                  <Label prefHeight="30.0" prefWidth="431.0" text="Temps durant lequel une ampoule de 60W doit">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="431.0" text="rester allumée pour correspondre à l'énergie">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="431.0" text="consommée par l'appareil après un an :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reponse" prefHeight="40.0" prefWidth="475.0" >
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
                </children></VBox>
          </children>
       </GridPane>
