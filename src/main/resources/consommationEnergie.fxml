@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -33,8 +35,8 @@
                </children></HBox>
             <HBox prefHeight="249.0" prefWidth="475.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
-                  <Slider fx:id="slider" max="3000.0" min="1.0" prefHeight="58.0" prefWidth="399.0" value="1.0" />
-                  <Label prefHeight="57.0" prefWidth="28.0" text="nb" />
+                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="399.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
+                  <Label fx:id="puissance" alignment="CENTER" prefHeight="57.0" prefWidth="28.0" text="nb" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <children>
@@ -46,11 +48,11 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Spinner fx:id="spinnerH" prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerH" editable="true" max="24" min="0" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="26.0" prefWidth="28.0" text="h" />
-                  <Spinner fx:id="spinnerMin" prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerMin" max="59" min="0" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="25.0" prefWidth="28.0" text="min" />
-                  <Spinner fx:id="spinnerSec" prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerSec" max="59" min="0" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="25.0" prefWidth="28.0" text="sec" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
@@ -63,11 +65,27 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" value="Aucune">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Aucune" />
+                           <String fx:value="Une fois par jour" />
+                           <String fx:value="Deux fois par jour" />
+                           <String fx:value="Une fois par semaine" />
+                           <String fx:value="Deux fois par semaine" />
+                           <String fx:value="Une fois par mois" />
+                           <String fx:value="Deux fois par mois" />
+                           <String fx:value="Deux fois par année" />
+                           <String fx:value="Trois fois par année" />
+                           <String fx:value="Quatre fois par année" />
+
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
+                  <Button fx:id="convertir" mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -75,8 +93,8 @@
                </children></HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Label prefHeight="39.0" prefWidth="431.0" text="Le temps durant lequel une ampoule doit rester allumée :" />
-                  <Label fx:id="reponse" prefHeight="39.0" prefWidth="431.0" />
+                  <Label prefHeight="39.0" prefWidth="431.0" text="Temps durant lequel une ampoule de 60W doit rester allumée pour correspondre à l'énergie consommée par l'appareil après un an :" />
+                  <Label fx:id="reponse" prefHeight="50.0" prefWidth="500.0" />
                </children></VBox>
          </children>
       </GridPane>
