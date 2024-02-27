@@ -11,6 +11,9 @@ public class ConsomEnergie {
     Slider slider;
 
     @FXML
+    Label puissance;
+
+    @FXML
     Spinner<Integer> spinnerH;
 
     @FXML
