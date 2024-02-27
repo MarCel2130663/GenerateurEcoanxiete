@@ -2,6 +2,7 @@
 
 <?import java.lang.*?>
 <?import javafx.collections.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -25,19 +26,25 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <HBox prefHeight="249.0" prefWidth="864.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <HBox prefHeight="249.0" prefWidth="864.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
                <children>
                   <Label prefHeight="57.0" prefWidth="424.0" text="Puissance de l'appareil :">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-               </children></HBox>
-            <HBox prefHeight="249.0" prefWidth="475.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
+            <HBox prefHeight="249.0" prefWidth="475.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
-                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="399.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
-                  <Label fx:id="puissance" alignment="CENTER" prefHeight="57.0" prefWidth="28.0" text="nb" />
-               </children></HBox>
+                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="326.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
+                  <Label fx:id="puissance" alignment="CENTER" prefHeight="57.0" prefWidth="28.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <children>
                   <Label prefHeight="35.0" prefWidth="135.0" text="Temps :">
@@ -46,24 +53,30 @@
                      </font>
                   </Label>
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Spinner fx:id="spinnerH" editable="true" max="24" min="0" prefHeight="26.0" prefWidth="65.0" />
-                  <Label prefHeight="26.0" prefWidth="28.0" text="h" />
-                  <Spinner fx:id="spinnerMin" max="59" min="0" prefHeight="26.0" prefWidth="65.0" />
-                  <Label prefHeight="25.0" prefWidth="28.0" text="min" />
-                  <Spinner fx:id="spinnerSec" max="59" min="0" prefHeight="26.0" prefWidth="65.0" />
-                  <Label prefHeight="25.0" prefWidth="28.0" text="sec" />
-               </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <Spinner fx:id="spinnerH" editable="true" max="24" min="0" prefHeight="26.0" prefWidth="100.0" />
+                  <Label prefHeight="26.0" prefWidth="23.0" text="h" />
+                  <Spinner fx:id="spinnerMin" max="59" min="0" prefHeight="26.0" prefWidth="100.0" />
+                  <Label prefHeight="26.0" prefWidth="50.0" text="min" />
+                  <Spinner fx:id="spinnerSec" max="59" min="0" prefHeight="26.0" prefWidth="100.0" />
+                  <Label prefHeight="26.0" prefWidth="50.0" text="sec" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
                <children>
                   <Label prefHeight="35.0" prefWidth="150.0" text="Fréquence :">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-               </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <ChoiceBox fx:id="choiceBox" prefWidth="150.0" value="Aucune">
                      <items>
@@ -82,36 +95,45 @@
                         </FXCollections>
                      </items>
                   </ChoiceBox>
-               </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>
                   <Button fx:id="convertir" mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-               </children></HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Label prefHeight="30.0" prefWidth="431.0" text="Temps durant lequel une ampoule de 60W doit">
+                  <Label alignment="TOP_CENTER" prefHeight="25.0" prefWidth="422.0" text="Temps durant lequel une ampoule de 60W doit">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="30.0" prefWidth="431.0" text="rester allumée pour correspondre à l'énergie">
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="422.0" text="rester allumée pour correspondre à l'énergie">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="30.0" prefWidth="431.0" text="consommée par l'appareil après un an :">
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="422.0" text="consommée par l'appareil après un an :">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="reponse" prefHeight="40.0" prefWidth="475.0" >
+                  <Label fx:id="reponse" alignment="CENTER" prefHeight="40.0" prefWidth="475.0">
                      <font>
                         <Font size="36.0" />
                      </font>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
                   </Label>
                </children></VBox>
          </children>
@@ -121,13 +143,19 @@
 
    </right>
    <top>
-      <VBox prefHeight="105.0" prefWidth="1062.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="49.0" prefWidth="701.0" text="                                                               Consommation d'énergie">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="1130.0" text="Consommation d'énergie">
                <font>
                   <Font size="24.0" />
                </font></Label>
             <Button mnemonicParsing="false" text="Menu" />
-         </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding></VBox>
    </top>
+   <padding>
+      <Insets bottom="20.0" right="20.0" top="20.0" />
+   </padding>
 </BorderPane>
