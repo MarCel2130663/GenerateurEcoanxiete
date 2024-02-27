@@ -33,7 +33,7 @@
                </children></HBox>
             <HBox prefHeight="249.0" prefWidth="475.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
-                  <Slider prefHeight="58.0" prefWidth="399.0" />
+                  <Slider fx:id="slider" max="3000.0" min="1.0" prefHeight="58.0" prefWidth="399.0" value="1.0" />
                   <Label prefHeight="57.0" prefWidth="28.0" text="nb" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
@@ -46,11 +46,11 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerH" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="26.0" prefWidth="28.0" text="h" />
-                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerMin" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="25.0" prefWidth="28.0" text="min" />
-                  <Spinner prefHeight="26.0" prefWidth="65.0" />
+                  <Spinner fx:id="spinnerSec" prefHeight="26.0" prefWidth="65.0" />
                   <Label prefHeight="25.0" prefWidth="28.0" text="sec" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
@@ -63,7 +63,7 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <ChoiceBox prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>

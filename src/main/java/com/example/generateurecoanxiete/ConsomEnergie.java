@@ -11,6 +11,9 @@ public class ConsomEnergie {
     Slider slider;
 
     @FXML
+    Label puissance;
+
+    @FXML
     Spinner<Integer> spinnerH;
 
     @FXML
@@ -75,11 +78,8 @@ public class ConsomEnergie {
             return (long) (energieConsommee / 60);
     }
 
-    public String convertir(){
-        return secEnHeureMinSec(calculTempsAmpoule((long) slider.getValue(), heureMinSecEnSec(spinnerH.getValue(), spinnerMin.getValue(), spinnerSec.getValue()), choiceBox.getValue()));
+    public void convertir(){
+        reponse.setText(secEnHeureMinSec(calculTempsAmpoule((long) slider.getValue(), heureMinSecEnSec(spinnerH.getValue(), spinnerMin.getValue(), spinnerSec.getValue()), choiceBox.getValue())));
     }
 
-    public void label(){
-        reponse.setText(convertir());
-    }
 }
