@@ -19,7 +19,7 @@
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="350.0" text="Déchets">
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets">
                <font>
                   <Font size="18.0" />
                </font></Button>
