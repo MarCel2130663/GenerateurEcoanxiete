@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.DeplacementsEnArbres">
    <left>
-      <ImageView fitHeight="612.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+      <ImageView fitHeight="612.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </left>
    <top>
       <VBox prefHeight="105.0" prefWidth="1062.0" BorderPane.alignment="CENTER">
@@ -36,7 +36,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
                <children>
-                  <Label prefHeight="43.0" prefWidth="212.0" text="Distance parcourue :">
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" text="Distance parcourue :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -53,7 +53,7 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <children>
-                  <Label prefHeight="43.0" prefWidth="212.0" text="Quantite de carburant :">
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" text="Quantite de carburant :">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
