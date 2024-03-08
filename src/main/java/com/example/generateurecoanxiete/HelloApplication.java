@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 public class HelloApplication extends Application {
 
@@ -17,12 +16,14 @@ public class HelloApplication extends Application {
     stage.setScene(scene);
 }
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage){
+
+        SuiviDechets test = new SuiviDechets();
 
         HelloApplication.stage = stage;
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/consommationEnergie.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 811, 1062);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
             stage.setTitle("Generateur d'ecoanxiete");
             stage.setScene(scene);
             stage.show();
