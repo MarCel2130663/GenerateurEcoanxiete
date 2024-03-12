@@ -11,4 +11,6 @@ module com.example.generateurecoanxiete {
     exports com.example.generateurecoanxiete;
     exports com.example.generateurecoanxiete.testsUnitaires;
     opens com.example.generateurecoanxiete.testsUnitaires to javafx.fxml;
+    exports com.example.generateurecoanxiete.controllers;
+    opens com.example.generateurecoanxiete.controllers to javafx.fxml;
 }

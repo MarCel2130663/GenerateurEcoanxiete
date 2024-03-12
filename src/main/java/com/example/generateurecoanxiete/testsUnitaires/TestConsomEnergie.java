@@ -1,6 +1,6 @@
 package com.example.generateurecoanxiete.testsUnitaires;
 
-import com.example.generateurecoanxiete.ConsomEnergie;
+import com.example.generateurecoanxiete.controllers.ConsomEnergie;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

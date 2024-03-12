@@ -1,5 +1,7 @@
-package com.example.generateurecoanxiete;
+package com.example.generateurecoanxiete.controllers;
 
+import com.example.generateurecoanxiete.DechetAjout;
+import com.example.generateurecoanxiete.DechetBase;
 import javafx.scene.image.Image;
 
 import java.io.IOException;
@@ -28,7 +30,7 @@ public class SuiviDechets {
     LocalDate aujourdhui = LocalDate.now();
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
-    SuiviDechets(){
+    public SuiviDechets(){
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {

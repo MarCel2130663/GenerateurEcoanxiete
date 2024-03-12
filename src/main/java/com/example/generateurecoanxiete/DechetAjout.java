@@ -11,7 +11,7 @@ public class DechetAjout {
     Image image;
     LocalDate date;
 
-    DechetAjout(String nom, Image image, LocalDate date){
+    public DechetAjout(String nom, Image image, LocalDate date){
         this.nom = nom;
         this.image = image;
         this.date = date;

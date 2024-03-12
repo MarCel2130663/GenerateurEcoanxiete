@@ -8,7 +8,7 @@ public class DechetBase {
     String tempsDesintegration;
     Image image;
 
-    DechetBase(String nom, String tempsDesintegration, Image image){
+    public DechetBase(String nom, String tempsDesintegration, Image image){
         this.nom = nom;
         this.tempsDesintegration = tempsDesintegration;
         this.image = image;

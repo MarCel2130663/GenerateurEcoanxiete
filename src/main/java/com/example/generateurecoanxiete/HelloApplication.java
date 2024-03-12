@@ -1,5 +1,6 @@
 package com.example.generateurecoanxiete;
 
+import com.example.generateurecoanxiete.controllers.SuiviDechets;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
