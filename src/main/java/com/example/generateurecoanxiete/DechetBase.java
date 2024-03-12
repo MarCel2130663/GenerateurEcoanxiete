@@ -6,12 +6,10 @@ public class DechetBase {
 
     String nom;
     String tempsDesintegration;
-    Image image;
 
-    public DechetBase(String nom, String tempsDesintegration, Image image){
+    public DechetBase(String nom, String tempsDesintegration){
         this.nom = nom;
         this.tempsDesintegration = tempsDesintegration;
-        this.image = image;
     }
 
     public String getNom(){
@@ -20,10 +18,6 @@ public class DechetBase {
 
     public String getTempsDesintegration(){
         return tempsDesintegration;
-    }
-
-    public Image getImage(){
-        return image;
     }
 
 }

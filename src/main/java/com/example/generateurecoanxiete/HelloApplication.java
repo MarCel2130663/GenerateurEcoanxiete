@@ -19,8 +19,6 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage){
 
-        SuiviDechets test = new SuiviDechets();
-
         HelloApplication.stage = stage;
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/accueil.fxml"));
