@@ -149,7 +149,7 @@
                <font>
                   <Font size="24.0" />
                </font></Label>
-            <Button mnemonicParsing="false" text="Menu" />
+            <Button fx:id="menu" mnemonicParsing="false" onAction="#menu" text="Menu" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.converter.NumberStringConverter;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class ConsomEnergie {
@@ -29,6 +30,9 @@ public class ConsomEnergie {
 
     @FXML
     Label reponse;
+
+    @FXML
+    Button menu;
 
     @FXML
     public void initialize(){
@@ -89,5 +93,8 @@ public class ConsomEnergie {
         reponse.setText(secEnHeureMinSec(calculTempsAmpoule((int) slider.getValue(), heureMinSecEnSec(spinnerH.getValue(), spinnerMin.getValue(), spinnerSec.getValue()), choiceBox.getValue())));
     }
 
+    public void menu() throws IOException {
+        HelloApplication.changerScene("/menu.fxml");
+    }
 
 }

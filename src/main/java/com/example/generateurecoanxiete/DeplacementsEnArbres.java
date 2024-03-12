@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 public class DeplacementsEnArbres {
@@ -17,7 +18,12 @@ public class DeplacementsEnArbres {
 
     @FXML
     Button trouverConsomCarb;
-
+    @FXML
+    Button menuDeplacement;
+    @FXML
+    Button menuCarburant;
+    @FXML
+    Button retour;
     @FXML
     Label reponse;
 
@@ -29,6 +35,14 @@ public class DeplacementsEnArbres {
 
     public void trouverConsomCarb(){
         reponse.setText(calculConsomCarb(spinnerDist.getValue(), spinnerQuantCarb.getValue()));
+    }
+
+    public void menu() throws IOException {
+        HelloApplication.changerScene("/menu.fxml");
+    }
+
+    public void retour() throws IOException {
+        HelloApplication.changerScene("/deplacementArbres.fxml");
     }
 
 }

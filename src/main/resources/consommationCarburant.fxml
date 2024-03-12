@@ -19,7 +19,7 @@
                </font>
             </Label>
             <Button mnemonicParsing="false" text="Retour" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Menu" />
+            <Button fx:id="menuCarburant" mnemonicParsing="false" onAction="#menu" prefHeight="25.0" prefWidth="52.0" text="Menu" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -1,15 +1,17 @@
 package com.example.generateurecoanxiete;
 
 import javafx.scene.image.Image;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 public class DechetAjout {
 
     String nom;
     Image image;
-    Date date;
+    LocalDate date;
 
-    DechetAjout(String nom, Image image, Date date){
+    DechetAjout(String nom, Image image, LocalDate date){
         this.nom = nom;
         this.image = image;
         this.date = date;
@@ -23,7 +25,7 @@ public class DechetAjout {
         return image;
     }
 
-    public Date getDate(){
+    public LocalDate getDate(){
         return date;
     }
 

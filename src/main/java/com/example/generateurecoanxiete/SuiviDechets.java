@@ -5,7 +5,10 @@ import javafx.scene.image.Image;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SuiviDechets {
@@ -21,8 +24,9 @@ public class SuiviDechets {
     }
 
     List<DechetBase> listeBase = new ArrayList<>();
-
     List<DechetAjout> poubelle = new ArrayList<>();
+    LocalDate aujourdhui = LocalDate.now();
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
     SuiviDechets(){
         for (String allLine : allLines) {
@@ -34,8 +38,8 @@ public class SuiviDechets {
         }
     }
 
-    public void ajouterPoubelle(){
-        poubelle.add();
+    public void ajouterPoubelle(DechetBase nouveauDechet){
+        poubelle.add(new DechetAjout(nouveauDechet.getNom(), nouveauDechet.getImage(), aujourdhui));
     }
 
 }
