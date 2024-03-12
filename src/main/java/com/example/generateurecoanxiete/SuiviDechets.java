@@ -32,7 +32,10 @@ public class SuiviDechets {
                 System.out.println(infos[0] + ", " + infos[1]);
             }
         }
+    }
 
+    public void ajouterPoubelle(){
+        poubelle.add();
     }
 
 }
