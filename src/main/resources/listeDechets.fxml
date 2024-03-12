@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1062.0" text="Liste de Déchets">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" text="Menu" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </top>
+   <left>
+      <Label prefHeight="625.0" prefWidth="385.0" text="Fun facts" BorderPane.alignment="CENTER" />
+   </left>
+
+   <bottom>
+      <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="205.0" text="Ajouter a ma poubelle" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <center>
+      <ScrollPane prefHeight="625.0" prefWidth="821.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="623.0" prefWidth="788.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="Boite en aluminium">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Ampoule">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Boite de conserve">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Bouteille de plastique">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Briquet">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Canette">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Carton">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Chewing-gum">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Mégot de cigarette">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Couche jetable">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Papier journal">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Brique de lait">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Masque chirurgical">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Mouchoir ou serviette en papier">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Papier de bonbon">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pile">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pneu">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Récipient en polysterene">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sac en plastique">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Tampon ou serviette hygiènique">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Verre">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding></CheckBox>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+   </center>
+
+
+</BorderPane>
