@@ -13,27 +13,18 @@ public class ConsomEnergie {
 
     @FXML
     Slider slider;
-
     @FXML
     Label puissance;
-
     @FXML
     Spinner<Integer> spinnerH;
-
     @FXML
     Spinner<Integer> spinnerMin;
-
     @FXML
     Spinner<Integer> spinnerSec;
-
     @FXML
     ChoiceBox<String> choiceBox;
-
     @FXML
     Label reponse;
-
-    @FXML
-    Button menu;
 
     @FXML
     public void initialize(){

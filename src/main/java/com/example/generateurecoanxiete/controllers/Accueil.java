@@ -8,12 +8,6 @@ import java.io.IOException;
 
 public class Accueil {
 
-    @FXML
-    Button menuAccueil;
-
-    @FXML
-    Button creditsAccueil;
-
     public void menuAccueil() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
     }

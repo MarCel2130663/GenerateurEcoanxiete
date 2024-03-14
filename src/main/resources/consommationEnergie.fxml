@@ -101,7 +101,7 @@
                </padding></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="convertir" mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
+                  <Button mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -149,7 +149,7 @@
                <font>
                   <Font size="24.0" />
                </font></Label>
-            <Button fx:id="menu" mnemonicParsing="false" onAction="#menu" text="Menu" />
+            <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

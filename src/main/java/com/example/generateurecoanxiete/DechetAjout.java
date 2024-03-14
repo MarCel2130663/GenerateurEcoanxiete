@@ -9,12 +9,10 @@ import java.util.Date;
 public class DechetAjout {
 
     String nom;
-    ImageView imageView;
     LocalDate date;
 
-    public DechetAjout(String nom, ImageView imageView, LocalDate date){
+    public DechetAjout(String nom, LocalDate date){
         this.nom = nom;
-        this.imageView = imageView;
         this.date = date;
     }
 
@@ -22,12 +20,12 @@ public class DechetAjout {
         return nom;
     }
 
-    public ImageView getImage(){
-        return imageView;
-    }
-
     public LocalDate getDate(){
         return date;
+    }
+
+    public String convertirCSV(){
+        return nom + ", " + date + "\n";
     }
 
 }

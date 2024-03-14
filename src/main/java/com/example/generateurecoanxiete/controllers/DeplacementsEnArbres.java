@@ -13,18 +13,8 @@ public class DeplacementsEnArbres {
 
     @FXML
     Spinner<Integer> spinnerDist;
-
     @FXML
     Spinner<Integer> spinnerQuantCarb;
-
-    @FXML
-    Button trouverConsomCarb;
-    @FXML
-    Button menuDeplacement;
-    @FXML
-    Button menuCarburant;
-    @FXML
-    Button retour;
     @FXML
     Label reponse;
 

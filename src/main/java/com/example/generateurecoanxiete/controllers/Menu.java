@@ -8,18 +8,6 @@ import java.io.IOException;
 
 public class Menu {
 
-    @FXML
-    Button deplacement;
-
-    @FXML
-    Button suiviDechets;
-
-    @FXML
-    Button consomEnergie;
-
-    @FXML
-    Button retour;
-
     public void deplacement() throws IOException {
         HelloApplication.changerScene("/deplacementsArbres.fxml");
     }

@@ -13,21 +13,21 @@
          </font></Label>
    </top>
    <center>
-      <VBox alignment="CENTER" prefHeight="624.0" prefWidth="764.0" spacing="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="624.0" prefWidth="764.0" spacing="75.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="deplacement" mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="350.0" text="Déplacement en arbres">
+            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="350.0" text="Déplacement en arbres">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button fx:id="suiviDechets" mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets">
+            <Button mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button fx:id="consomEnergie" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="350.0" text="Consommation d'énergie" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="350.0" text="Consommation d'énergie" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button fx:id="retour" mnemonicParsing="false" onAction="#retour" text="Retour" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
          </children>
       </VBox>
    </center>
