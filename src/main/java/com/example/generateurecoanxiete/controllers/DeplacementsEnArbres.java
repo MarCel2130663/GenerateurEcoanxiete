@@ -32,7 +32,7 @@ public class DeplacementsEnArbres {
         HelloApplication.changerScene("/menu.fxml");
     }
 
-    public void retour() throws IOException {
+    public void retourCarburant() throws IOException {
         HelloApplication.changerScene("/deplacementArbres.fxml");
     }
 

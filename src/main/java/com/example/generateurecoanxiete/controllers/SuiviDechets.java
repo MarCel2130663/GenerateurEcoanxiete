@@ -76,7 +76,7 @@ public class SuiviDechets {
     List<DechetBase> listeBase = new ArrayList<>();
     List<DechetAjout> poubelle = new ArrayList<>();
     LocalDate aujourdhui = LocalDate.now();
-    FileWriter fw = new FileWriter("PoubelleUtilisateur.csv");
+    FileWriter fw = new FileWriter("/PoubelleUtilisateur.csv");
 
     public SuiviDechets() throws IOException {
     }
@@ -118,13 +118,31 @@ public class SuiviDechets {
         for (DechetAjout dechetAjout : poubelle) {
             try {
                 fw.write(dechetAjout.convertirCSV());
-                fw.flush();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            System.out.print(dechetAjout.convertirCSV());
         }
-        if(!poubelle.isEmpty())
+        if(!poubelle.isEmpty()){
             HelloApplication.changerScene("/poubelle.fxml");
+            poubelle.clear();
+        }
+    }
+
+    public void voirGraphique() throws IOException {
+        HelloApplication.changerScene("/graphique.fxml");
+    }
+
+    public void menu() throws IOException {
+        HelloApplication.changerScene("/menu.fxml");
+    }
+
+    public void retourGraphique() throws IOException {
+        HelloApplication.changerScene("/poubelle.fxml");
+    }
+
+    public void retourPoubelle() throws IOException {
+        HelloApplication.changerScene("/listeDechets.fxml");
     }
 
 }
