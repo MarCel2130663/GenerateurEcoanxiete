@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -25,9 +26,7 @@
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
-   <right>
-      <Label prefHeight="626.0" prefWidth="378.0" text="Fun facts" BorderPane.alignment="CENTER" />
-   </right>
+
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
@@ -41,4 +40,13 @@
          </font>
       </Button>
    </bottom>
+   <right>
+      <VBox prefHeight="569.0" prefWidth="371.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="148.0" prefWidth="394.0" text="Nom du dechet" />
+            <ImageView fitHeight="413.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true" />
+            <Label prefHeight="212.0" prefWidth="394.0" text="informations dechet" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
