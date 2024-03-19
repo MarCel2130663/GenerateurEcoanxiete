@@ -28,10 +28,7 @@
    </padding>
 
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <content>
-
-         </content></ScrollPane>
+      <ScrollPane fx:id="scrollPoubelle" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="255.0" text="Voir mon graphique" BorderPane.alignment="CENTER">
