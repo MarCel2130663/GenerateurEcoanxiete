@@ -2,7 +2,6 @@ package com.example.generateurecoanxiete.controllers;
 
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 
@@ -16,7 +15,9 @@ public class DeplacementsEnArbres {
     @FXML
     Spinner<Integer> spinnerQuantCarb;
     @FXML
-    Label reponse;
+    Label reponseCarburant;
+    @FXML
+    Label reponseDeplacement;
 
     DecimalFormat df = new DecimalFormat("0.00");
 
@@ -25,14 +26,18 @@ public class DeplacementsEnArbres {
     }
 
     public void trouverConsomCarb(){
-        reponse.setText(calculConsomCarb(spinnerDist.getValue(), spinnerQuantCarb.getValue()));
+        reponseCarburant.setText(calculConsomCarb(spinnerDist.getValue(), spinnerQuantCarb.getValue()));
+    }
+
+    public void convertir(){
+        reponseDeplacement.setText("reponse");
     }
 
     public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
     }
 
-    public void retourCarburant() throws IOException {
+    public void retour() throws IOException {
         HelloApplication.changerScene("/deplacementArbres.fxml");
     }
 

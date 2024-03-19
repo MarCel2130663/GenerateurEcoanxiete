@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -65,6 +66,8 @@ public class SuiviDechets {
     @FXML
     ScrollPane scrollPoubelle;
     @FXML
+    VBox vBox;
+    @FXML
     Label nomDechet;
     @FXML
     ImageView imageView;
@@ -83,7 +86,7 @@ public class SuiviDechets {
     List<Dechet> poubelle = new ArrayList<>();
     LocalDate aujourdhui = LocalDate.now();
 
-    public SuiviDechets() throws IOException {
+    public SuiviDechets(){
     }
 
     public void initialize(){
@@ -136,9 +139,14 @@ public class SuiviDechets {
             }
         }
         fw.flush();
+        if(scrollPoubelle != null){
+            scrollPoubelle.setContent(vBox);
+        }
         for(Dechet dechet : poubelle){
             Button bouton = new Button(dechet.getNom());
-            scrollPoubelle.setContent(bouton);
+            if(vBox != null){
+                vBox.getChildren().add(bouton);
+            }
             bouton.setOnAction(e -> {
                 nomDechet.setText(dechet.getNom());
                 imageView.setImage(new Image(String.valueOf(dechet)));

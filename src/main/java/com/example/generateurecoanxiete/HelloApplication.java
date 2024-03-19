@@ -1,6 +1,5 @@
 package com.example.generateurecoanxiete;
 
-import com.example.generateurecoanxiete.controllers.SuiviDechets;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,7 +14,8 @@ public class HelloApplication extends Application {
     FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource(nouvelleScene));
     Scene scene = new Scene(root.load(), 500, 750);
     stage.setScene(scene);
-}
+    }
+
     @Override
     public void start(Stage stage){
 
