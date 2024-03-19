@@ -3,13 +3,7 @@ package com.example.generateurecoanxiete.controllers;
 import com.example.generateurecoanxiete.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -82,7 +76,7 @@ public class SuiviDechets {
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {
-                listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
+                listeBase.add(new Dechet(infos[0], infos[1], infos[2], null));
             }
             else
                 System.out.println("La liste de déchets prédéfinis est vide.");
@@ -115,7 +109,7 @@ public class SuiviDechets {
         listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
             for(Dechet dechet : listeBase){
                 if(dechet.getNom().equals(e.getText())){
-                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), LocalDate.now()));
+                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImageURL(), LocalDate.now()));
                 }
             }
         });

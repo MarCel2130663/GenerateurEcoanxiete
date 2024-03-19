@@ -57,12 +57,12 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="bouteillePlastique" mnemonicParsing="false" text="Bouteille de plastique">
+                  <CheckBox fx:id="bouteillePlastique" mnemonicParsing="false" text="Bouteille en plastique">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="briquet" mnemonicParsing="false" text="Briquet">
+                  <CheckBox fx:id="briquet" mnemonicParsing="false" text="Briquet en plastique">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding></CheckBox>
@@ -121,7 +121,7 @@
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding></CheckBox>
-                  <CheckBox fx:id="polystyrene" mnemonicParsing="false" text="Récipient en polysterene">
+                  <CheckBox fx:id="polystyrene" mnemonicParsing="false" text="Récipient en polystyrène">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding></CheckBox>

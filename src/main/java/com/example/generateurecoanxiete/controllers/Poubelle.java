@@ -30,11 +30,19 @@ public class Poubelle {
     @FXML
     Label tempsDesint;
     List<Dechet> listeBase = new ArrayList<>();
-    List<Dechet> poubelle = new ArrayList<>();
+    List<Dechet> maPoubelle = new ArrayList<>();
     List<String> allLines;
     {
         try {
             allLines = Files.readAllLines(Paths.get("DechetsBase.csv"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    List<String> poubelle;
+    {
+        try {
+            poubelle = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -44,29 +52,39 @@ public class Poubelle {
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {
-                listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
+                listeBase.add(new Dechet(infos[0], infos[1], infos[2], null));
             }
             else
                 System.out.println("La liste de déchets prédéfinis est vide.");
         }
-        for(Dechet dechet : poubelle){
-            for(Dechet dechetBase : listeBase){
-                if(dechet.getNom().equals(dechetBase.getNom())){
-                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), LocalDate.now()));
+        for (String dechet : poubelle) {
+            String[] infos = dechet.split(", ");
+            if (!dechet.isEmpty()) {
+                maPoubelle.add(new Dechet(infos[0], infos[1], infos[2], null));
+            }
+            else
+                System.out.println("La poubelle est vide.");
+        }
+        if(!maPoubelle.isEmpty()){
+            for(Dechet dechet : maPoubelle){
+                for(Dechet dechetBase : listeBase){
+                    if(dechet.getNom().equals(dechetBase.getNom())){
+                        maPoubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImageURL(), LocalDate.now()));
+                    }
                 }
             }
         }
         if(scrollPoubelle != null){
             scrollPoubelle.setContent(vBox);
         }
-        for(Dechet dechet : poubelle){
+        for(Dechet dechet : maPoubelle){
             Button bouton = new Button(dechet.getNom());
             if(vBox != null){
                 vBox.getChildren().add(bouton);
             }
             bouton.setOnAction(e -> {
                 nomDechet.setText(dechet.getNom());
-                imageView.setImage(new Image(String.valueOf(dechet)));
+                imageView.setImage(new Image(dechet.getImageURL()));
                 tempsDesint.setText(dechet.getTempsDesintegration());
             });
         }
