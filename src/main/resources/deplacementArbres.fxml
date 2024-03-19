@@ -40,7 +40,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
                <children>
                   <Spinner max="30" min="0" prefHeight="26.0" prefWidth="106.0" />
-                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="346.0" text="Je ne connais pas ma consommation">
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="306.0" text="Je ne connais pas ma consommation">
                      <font>
                         <Font size="17.0" />
                      </font></Button>
@@ -58,6 +58,55 @@
                   </Label>
                </children>
             </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Spinner max="10000" min="0" />
+                  <Label prefHeight="26.0" prefWidth="56.0" text="Km">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="251.0" text="Convertir">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="162.0" text="reponse">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="46.0" prefWidth="98.0" text="Arbres">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
          </children>
       </GridPane>
    </left>
