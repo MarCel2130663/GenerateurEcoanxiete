@@ -19,7 +19,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" text="Menu" />
+            <Button fx:id="menu" mnemonicParsing="false" text="Menu" />
          </children></VBox>
    </top>
    <right>
@@ -81,7 +81,7 @@
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="251.0" text="Convertir">
+                  <Button fx:id="convertir" mnemonicParsing="false" prefHeight="50.0" prefWidth="251.0" text="Convertir">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -93,7 +93,7 @@
             </VBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label prefHeight="45.0" prefWidth="162.0" text="reponse">
+                  <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0">
                      <font>
                         <Font size="18.0" />
                      </font>
