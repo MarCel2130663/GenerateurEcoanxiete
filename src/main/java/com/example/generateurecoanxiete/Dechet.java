@@ -2,16 +2,20 @@ package com.example.generateurecoanxiete;
 
 import javafx.scene.image.Image;
 
-public class DechetBase {
+import java.time.LocalDate;
+
+public class Dechet {
 
     String nom;
     String tempsDesintegration;
     Image image;
+    LocalDate date;
 
-    public DechetBase(String nom, String tempsDesintegration, Image image){
+    public Dechet(String nom, String tempsDesintegration, Image image, LocalDate date){
         this.nom = nom;
         this.tempsDesintegration = tempsDesintegration;
         this.image = image;
+        this.date = date;
     }
 
     public String getNom(){
@@ -21,5 +25,19 @@ public class DechetBase {
     public String getTempsDesintegration(){
         return tempsDesintegration;
     }
+
+    public Image getImage(){
+        return image;
+    }
+
+
+    public LocalDate getDate(){
+        return date;
+    }
+
+    public String convertirCSV(){
+        return nom + ", " + date + "\n";
+    }
+
 
 }

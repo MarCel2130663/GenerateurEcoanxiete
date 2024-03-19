@@ -1,11 +1,12 @@
 package com.example.generateurecoanxiete.controllers;
 
-import com.example.generateurecoanxiete.DechetAjout;
-import com.example.generateurecoanxiete.DechetBase;
+import com.example.generateurecoanxiete.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -14,11 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SuiviDechets {
 
@@ -64,6 +62,14 @@ public class SuiviDechets {
     CheckBox servietteTampon;
     @FXML
     CheckBox verre;
+    @FXML
+    ScrollPane scrollPoubelle;
+    @FXML
+    Label nomDechet;
+    @FXML
+    ImageView imageView;
+    @FXML
+    Label tempsDesint;
     List<CheckBox> listeCheckBoxes = new ArrayList<>();
     List<String> allLines;
     {
@@ -73,10 +79,9 @@ public class SuiviDechets {
             throw new RuntimeException(e);
         }
     }
-    List<DechetBase> listeBase = new ArrayList<>();
-    List<DechetAjout> poubelle = new ArrayList<>();
+    List<Dechet> listeBase = new ArrayList<>();
+    List<Dechet> poubelle = new ArrayList<>();
     LocalDate aujourdhui = LocalDate.now();
-    FileWriter fw = new FileWriter("/PoubelleUtilisateur.csv");
 
     public SuiviDechets() throws IOException {
     }
@@ -85,7 +90,7 @@ public class SuiviDechets {
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {
-                listeBase.add(new DechetBase(infos[0], infos[1], new Image(infos[2])));
+                listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
             }
             else
                 System.out.println("La liste de déchets prédéfinis est vide.");
@@ -114,18 +119,34 @@ public class SuiviDechets {
     }
 
     public void ajouterPoubelle() throws IOException {
-        listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> poubelle.add(new DechetAjout(e.getText(), aujourdhui)));
-        for (DechetAjout dechetAjout : poubelle) {
+        FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", true);
+        listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
+            for(Dechet dechet : listeBase){
+                if(dechet.getNom().equals(e.getText())){
+                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), aujourdhui));
+                }
+            }
+        });
+        for (Dechet dechet : poubelle) {
             try {
-                fw.write(dechetAjout.convertirCSV());
+                System.out.print(dechet.convertirCSV());
+                fw.write(dechet.convertirCSV());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            System.out.print(dechetAjout.convertirCSV());
+        }
+        fw.flush();
+        for(Dechet dechet : poubelle){
+            Button bouton = new Button(dechet.getNom());
+            scrollPoubelle.setContent(bouton);
+            bouton.setOnAction(e -> {
+                nomDechet.setText(dechet.getNom());
+                imageView.setImage(new Image(String.valueOf(dechet)));
+                tempsDesint.setText(dechet.getTempsDesintegration());
+            });
         }
         if(!poubelle.isEmpty()){
             HelloApplication.changerScene("/poubelle.fxml");
-            poubelle.clear();
         }
     }
 
@@ -143,6 +164,11 @@ public class SuiviDechets {
 
     public void retourPoubelle() throws IOException {
         HelloApplication.changerScene("/listeDechets.fxml");
+    }
+
+    public void viderPoubelle(){
+        //pop un avertissement
+        poubelle.clear();
     }
 
 }

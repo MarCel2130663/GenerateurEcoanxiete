@@ -29,7 +29,7 @@
       <Label prefHeight="626.0" prefWidth="378.0" text="Fun facts" BorderPane.alignment="CENTER" />
    </right>
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ScrollPane fx:id="scrollPoubelle" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="255.0" text="Voir mon graphique" BorderPane.alignment="CENTER">
