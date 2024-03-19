@@ -29,6 +29,10 @@ public class DeplacementsEnArbres {
         reponseCarburant.setText(calculConsomCarb(spinnerDist.getValue(), spinnerQuantCarb.getValue()));
     }
 
+    public void jncpmcdc() throws IOException {
+        HelloApplication.changerScene("/consommationCarburant.fxml");
+    }
+
     public void convertir(){
         reponseDeplacement.setText("reponse");
     }

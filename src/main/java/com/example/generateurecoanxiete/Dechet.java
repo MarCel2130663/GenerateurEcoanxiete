@@ -36,7 +36,7 @@ public class Dechet {
     }
 
     public String convertirCSV(){
-        return nom + ", " + date + "\n";
+        return nom + ", " + tempsDesintegration + ", " + image + ", " + date + "\n";
     }
 
 

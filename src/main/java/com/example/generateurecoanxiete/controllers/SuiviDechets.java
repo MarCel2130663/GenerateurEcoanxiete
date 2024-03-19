@@ -63,16 +63,6 @@ public class SuiviDechets {
     CheckBox servietteTampon;
     @FXML
     CheckBox verre;
-    @FXML
-    ScrollPane scrollPoubelle;
-    @FXML
-    VBox vBox;
-    @FXML
-    Label nomDechet;
-    @FXML
-    ImageView imageView;
-    @FXML
-    Label tempsDesint;
     List<CheckBox> listeCheckBoxes = new ArrayList<>();
     List<String> allLines;
     {
@@ -84,7 +74,6 @@ public class SuiviDechets {
     }
     List<Dechet> listeBase = new ArrayList<>();
     List<Dechet> poubelle = new ArrayList<>();
-    LocalDate aujourdhui = LocalDate.now();
 
     public SuiviDechets(){
     }
@@ -126,7 +115,7 @@ public class SuiviDechets {
         listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
             for(Dechet dechet : listeBase){
                 if(dechet.getNom().equals(e.getText())){
-                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), aujourdhui));
+                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), LocalDate.now()));
                 }
             }
         });
@@ -139,27 +128,9 @@ public class SuiviDechets {
             }
         }
         fw.flush();
-        if(scrollPoubelle != null){
-            scrollPoubelle.setContent(vBox);
-        }
-        for(Dechet dechet : poubelle){
-            Button bouton = new Button(dechet.getNom());
-            if(vBox != null){
-                vBox.getChildren().add(bouton);
-            }
-            bouton.setOnAction(e -> {
-                nomDechet.setText(dechet.getNom());
-                imageView.setImage(new Image(String.valueOf(dechet)));
-                tempsDesint.setText(dechet.getTempsDesintegration());
-            });
-        }
         if(!poubelle.isEmpty()){
             HelloApplication.changerScene("/poubelle.fxml");
         }
-    }
-
-    public void voirGraphique() throws IOException {
-        HelloApplication.changerScene("/graphique.fxml");
     }
 
     public void menu() throws IOException {
@@ -168,15 +139,6 @@ public class SuiviDechets {
 
     public void retourGraphique() throws IOException {
         HelloApplication.changerScene("/poubelle.fxml");
-    }
-
-    public void retourPoubelle() throws IOException {
-        HelloApplication.changerScene("/listeDechets.fxml");
-    }
-
-    public void viderPoubelle(){
-        //pop un avertissement
-        poubelle.clear();
     }
 
 }

@@ -39,7 +39,10 @@
                </padding></HBox>
             <VBox prefHeight="249.0" prefWidth="475.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
-                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="326.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
+                  <HBox>
+                     <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="98.0" text="W"/>
+                  </HBox>
                   <Label fx:id="puissance" alignment="CENTER" prefHeight="40.0" prefWidth="98.0" />
                </children>
                <padding>

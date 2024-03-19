@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Menu {
 
     public void deplacement() throws IOException {
-        HelloApplication.changerScene("/deplacementsArbres.fxml");
+        HelloApplication.changerScene("/deplacementArbres.fxml");
     }
 
     public void suiviDechets() throws IOException {

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.DeplacementsEnArbres">
 
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -19,7 +19,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="menu" mnemonicParsing="false" text="Menu" />
+            <Button onAction="#menu" mnemonicParsing="false" text="Menu" />
          </children></VBox>
    </top>
    <right>
@@ -39,11 +39,15 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
                <children>
-                  <Spinner max="30" min="0" prefHeight="26.0" prefWidth="106.0" />
-                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="306.0" text="Je ne connais pas ma consommation">
+                  <HBox prefHeight="60.0" prefWidth="306.0" >
+                         <Spinner max="30" min="1" />
+                         <Label text="L/100km"/>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#jncpmcdc" prefHeight="24.0" prefWidth="306.0" text="Je ne connais pas ma consommation de carburant">
                      <font>
-                        <Font size="17.0" />
+                        <Font size="13.0" />
                      </font></Button>
+
                </children>
                <padding>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -66,22 +70,25 @@
                      </font></Label>
                </children>
             </VBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <Spinner max="10000" min="0" />
-                  <Label prefHeight="26.0" prefWidth="56.0" text="Km">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </HBox>
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                     <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+                     <Label prefHeight="26.0" prefWidth="56.0" text="km">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                  </padding>
+               </HBox>
+               <Label fx:id="distance" />
+            </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="convertir" mnemonicParsing="false" prefHeight="50.0" prefWidth="251.0" text="Convertir">
+                  <Button mnemonicParsing="false" onAction="#convertir" prefHeight="50.0" prefWidth="251.0" text="Convertir">
                      <font>
                         <Font size="18.0" />
                      </font>

@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     private static Stage stage;
     public static void changerScene(String nouvelleScene) throws IOException {
     FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource(nouvelleScene));
-    Scene scene = new Scene(root.load(), 500, 750);
+    Scene scene = new Scene(root.load(), 800, 800);
     stage.setScene(scene);
     }
 
