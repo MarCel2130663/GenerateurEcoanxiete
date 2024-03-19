@@ -43,9 +43,9 @@
    <right>
       <VBox prefHeight="569.0" prefWidth="371.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="148.0" prefWidth="394.0" text="Nom du dechet" />
-            <ImageView fitHeight="413.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true" />
-            <Label prefHeight="212.0" prefWidth="394.0" text="informations dechet" />
+            <Label fx:id="nomDechet" prefHeight="148.0" prefWidth="394.0" text="Nom du dechet" />
+            <ImageView fx:id="imageView" fitHeight="413.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="tempsDesint" prefHeight="212.0" prefWidth="394.0" text="informations dechet" />
          </children>
       </VBox>
    </right>
