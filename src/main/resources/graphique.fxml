@@ -10,7 +10,7 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Graphique">
    <top>
-      <VBox prefHeight="105.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="151.0" prefWidth="1022.0" spacing="10.0" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
@@ -42,12 +42,12 @@
                   </FXCollections>
                </items>
             </ChoiceBox>
-            <BarChart prefHeight="599.0" prefWidth="544.0">
+            <BarChart fx:id="barChart" prefHeight="647.0" prefWidth="586.0">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" upperBound="20.0" />
+                <NumberAxis fx:id="axeNombre" label="Nombre de déchets produits" minorTickCount="3" prefHeight="495.0" prefWidth="51.0" side="LEFT" upperBound="27.5" />
               </yAxis>
             </BarChart>
          </children>
@@ -59,12 +59,11 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <children>
-            <ScrollPane prefHeight="298.0" prefWidth="415.0" />
-            <Label prefHeight="623.0" prefWidth="480.0">
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-            </Label>
+            <ScrollPane prefHeight="298.0" prefWidth="415.0">
+               <content>
+                  <VBox prefHeight="254.0" prefWidth="411.0" />
+               </content></ScrollPane>
+            <PieChart title="Aujourd'hui" />
          </children>
       </VBox>
    </right>
