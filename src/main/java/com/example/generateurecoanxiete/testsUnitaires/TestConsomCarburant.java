@@ -1,13 +1,15 @@
 package com.example.generateurecoanxiete.testsUnitaires;
 
+import com.example.generateurecoanxiete.controllers.ConsomCarburant;
+import com.example.generateurecoanxiete.controllers.ConsomEnergie;
 import com.example.generateurecoanxiete.controllers.DeplacementsEnArbres;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestDeplacementsEnArbres {
+public class TestConsomCarburant {
 
-    DeplacementsEnArbres testArbres = new DeplacementsEnArbres();
+    ConsomCarburant testArbres = new ConsomCarburant();
 
     @Test
     public void consomCarbTest(){

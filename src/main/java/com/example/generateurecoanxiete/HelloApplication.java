@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     private static Stage stage;
     public static void changerScene(String nouvelleScene) throws IOException {
     FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource(nouvelleScene));
-    Scene scene = new Scene(root.load(), 800, 800);
+    Scene scene = new Scene(root.load());
     stage.setScene(scene);
     }
 
@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
         HelloApplication.stage = stage;
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/accueil.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            Scene scene = new Scene(fxmlLoader.load());
             stage.setTitle("Generateur d'ecoanxiete");
             stage.setScene(scene);
             stage.show();

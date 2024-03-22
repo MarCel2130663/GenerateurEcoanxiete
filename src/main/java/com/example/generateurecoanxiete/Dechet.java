@@ -8,13 +8,13 @@ public class Dechet {
 
     String nom;
     String tempsDesintegration;
-    String imageURL;
+    Image image;
     LocalDate date;
 
-    public Dechet(String nom, String tempsDesintegration, String imageURL, LocalDate date){
+    public Dechet(String nom, String tempsDesintegration, Image image, LocalDate date){
         this.nom = nom;
         this.tempsDesintegration = tempsDesintegration;
-        this.imageURL = imageURL;
+        this.image = image;
         this.date = date;
     }
 
@@ -26,8 +26,8 @@ public class Dechet {
         return tempsDesintegration;
     }
 
-    public String getImageURL(){
-        return imageURL;
+    public Image getImage(){
+        return image;
     }
 
     public LocalDate getDate(){
@@ -35,7 +35,7 @@ public class Dechet {
     }
 
     public String convertirCSV(){
-        return nom + ", " + tempsDesintegration + ", " + imageURL + ", " + date + "\n";
+        return nom + ", " + tempsDesintegration + ", " + image.getUrl() + ", " + date + "\n";
     }
 
 

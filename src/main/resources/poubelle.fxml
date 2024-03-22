@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Poubelle">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Poubelle">
    <top>
       <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Ma poubelle">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Elephant" size="24.0" />
                </font></Label>
             <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
             <Button mnemonicParsing="false" onAction="#retourPoubelle" text="Retour" />
@@ -46,9 +46,15 @@
    <right>
       <VBox prefHeight="569.0" prefWidth="371.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="nomDechet" prefHeight="212.0" prefWidth="394.0" text="Nom du dechet" />
+            <Label fx:id="nomDechet" prefHeight="212.0" prefWidth="394.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
             <ImageView fx:id="imageView" fitHeight="364.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="tempsDesint" prefHeight="212.0" prefWidth="394.0" text="informations dechet" />
+            <Label fx:id="tempsDesint" prefHeight="212.0" prefWidth="394.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

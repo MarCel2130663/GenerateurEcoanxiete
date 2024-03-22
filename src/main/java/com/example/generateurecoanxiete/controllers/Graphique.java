@@ -7,19 +7,23 @@ import javafx.scene.layout.*;
 
 import java.io.IOException;
 
-public class Credits {
+public class Graphique {
 
     @FXML
     BorderPane borderPane;
 
     @FXML
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:creditsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
     }
 
+    public void menu() throws IOException {
+        HelloApplication.changerScene("/menu.fxml");
+    }
+
     public void retour() throws IOException {
-        HelloApplication.changerScene("/accueil.fxml");
+        HelloApplication.changerScene("/poubelle.fxml");
     }
 
 }

@@ -4,6 +4,8 @@ import com.example.generateurecoanxiete.HelloApplication;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
@@ -25,9 +27,14 @@ public class ConsomEnergie {
     ChoiceBox<String> choiceBox;
     @FXML
     Label reponse;
+    @FXML
+    BorderPane borderPane;
 
     @FXML
     public void initialize(){
+        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:consomEnergieBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+
         Bindings.bindBidirectional(puissance.textProperty(), slider.valueProperty(), new NumberStringConverter());
     }
 

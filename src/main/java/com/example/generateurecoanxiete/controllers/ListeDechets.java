@@ -4,6 +4,8 @@ import com.example.generateurecoanxiete.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,8 +15,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SuiviDechets {
+public class ListeDechets {
 
+    @FXML
+    BorderPane borderPane;
     @FXML
     CheckBox aluminium;
     @FXML
@@ -69,14 +73,17 @@ public class SuiviDechets {
     List<Dechet> listeBase = new ArrayList<>();
     List<Dechet> poubelle = new ArrayList<>();
 
-    public SuiviDechets(){
+    public ListeDechets(){
     }
 
     public void initialize(){
+        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {
-                listeBase.add(new Dechet(infos[0], infos[1], infos[2], null));
+                listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
             }
             else
                 System.out.println("La liste de déchets prédéfinis est vide.");
@@ -109,7 +116,7 @@ public class SuiviDechets {
         listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
             for(Dechet dechet : listeBase){
                 if(dechet.getNom().equals(e.getText())){
-                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImageURL(), LocalDate.now()));
+                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), LocalDate.now()));
                 }
             }
         });
@@ -122,17 +129,17 @@ public class SuiviDechets {
             }
         }
         fw.flush();
-        if(!poubelle.isEmpty()){
-            HelloApplication.changerScene("/poubelle.fxml");
+        for(CheckBox checkBox : listeCheckBoxes){
+            checkBox.setSelected(false);
         }
+    }
+
+    public void allerPoubelle() throws IOException {
+        HelloApplication.changerScene("/poubelle.fxml");
     }
 
     public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
-    }
-
-    public void retourGraphique() throws IOException {
-        HelloApplication.changerScene("/poubelle.fxml");
     }
 
 }

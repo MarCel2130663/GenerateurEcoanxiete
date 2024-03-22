@@ -4,11 +4,12 @@ import com.example.generateurecoanxiete.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,9 +17,12 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Poubelle {
 
+    @FXML
+    BorderPane borderPane;
     @FXML
     ScrollPane scrollPoubelle;
     @FXML
@@ -29,16 +33,7 @@ public class Poubelle {
     ImageView imageView;
     @FXML
     Label tempsDesint;
-    List<Dechet> listeBase = new ArrayList<>();
     List<Dechet> maPoubelle = new ArrayList<>();
-    List<String> allLines;
-    {
-        try {
-            allLines = Files.readAllLines(Paths.get("DechetsBase.csv"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
     List<String> poubelle;
     {
         try {
@@ -49,33 +44,16 @@ public class Poubelle {
     }
 
     public void initialize(){
-        for (String allLine : allLines) {
-            String[] infos = allLine.split(", ");
-            if (!allLine.isEmpty()) {
-                listeBase.add(new Dechet(infos[0], infos[1], infos[2], null));
-            }
-            else
-                System.out.println("La liste de déchets prédéfinis est vide.");
-        }
+        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+
         for (String dechet : poubelle) {
             String[] infos = dechet.split(", ");
             if (!dechet.isEmpty()) {
-                maPoubelle.add(new Dechet(infos[0], infos[1], infos[2], null));
+                maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.now()));
             }
             else
                 System.out.println("La poubelle est vide.");
-        }
-        if(!maPoubelle.isEmpty()){
-            for(Dechet dechet : maPoubelle){
-                for(Dechet dechetBase : listeBase){
-                    if(dechet.getNom().equals(dechetBase.getNom())){
-                        maPoubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImageURL(), LocalDate.now()));
-                    }
-                }
-            }
-        }
-        if(scrollPoubelle != null){
-            scrollPoubelle.setContent(vBox);
         }
         for(Dechet dechet : maPoubelle){
             Button bouton = new Button(dechet.getNom());
@@ -84,7 +62,8 @@ public class Poubelle {
             }
             bouton.setOnAction(e -> {
                 nomDechet.setText(dechet.getNom());
-                imageView.setImage(new Image(dechet.getImageURL()));
+                System.out.println(dechet.getImage());
+                imageView.setImage(new Image(dechet.getImage().getUrl()));
                 tempsDesint.setText(dechet.getTempsDesintegration());
             });
         }

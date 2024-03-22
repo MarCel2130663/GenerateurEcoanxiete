@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.DeplacementsEnArbres">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.DeplacementsEnArbres">
 
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -19,7 +19,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button onAction="#menu" mnemonicParsing="false" text="Menu" />
+            <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
          </children></VBox>
    </top>
    <right>
@@ -39,9 +39,16 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
                <children>
-                  <HBox prefHeight="60.0" prefWidth="306.0" >
-                         <Spinner max="30" min="1" />
-                         <Label text="L/100km"/>
+                  <HBox prefHeight="60.0" prefWidth="306.0" spacing="10.0">
+                        <Spinner max="30" min="1" />
+                        <Label text="L/100km" >
+                             <font>
+                                <Font size="14.0"/>
+                             </font>
+                        </Label>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
                   </HBox>
                   <Button mnemonicParsing="false" onAction="#jncpmcdc" prefHeight="24.0" prefWidth="306.0" text="Je ne connais pas ma consommation de carburant">
                      <font>
@@ -71,10 +78,15 @@
                </children>
             </VBox>
             <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                   <children>
-                     <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
-                     <Label prefHeight="26.0" prefWidth="56.0" text="km">
+                     <Label fx:id="distance" prefHeight="40.0" prefWidth="80.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                     <Label prefHeight="40.0" prefWidth="30.0" text="km">
                         <font>
                            <Font size="18.0" />
                         </font>
@@ -84,7 +96,6 @@
                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                   </padding>
                </HBox>
-               <Label fx:id="distance" />
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
                <children>
@@ -102,10 +113,10 @@
                <children>
                   <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="46.0" prefWidth="98.0" text="Arbres">
+                  <Label prefHeight="46.0" prefWidth="98.0" text="arbres">
                      <font>
                         <Font size="18.0" />
                      </font></Label>

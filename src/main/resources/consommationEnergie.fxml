@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ConsomEnergie">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ConsomEnergie">
 
    <left>
       <ImageView fitHeight="612.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
@@ -28,7 +28,7 @@
          <children>
             <HBox prefHeight="249.0" prefWidth="864.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
                <children>
-                  <Label prefHeight="57.0" prefWidth="424.0" text="Puissance de l'appareil :">
+                  <Label prefHeight="57.0" prefWidth="424.0" text="Puissance de l'appareil :" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -39,18 +39,25 @@
                </padding></HBox>
             <VBox prefHeight="249.0" prefWidth="475.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <children>
+                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
                   <HBox>
-                     <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="2000.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="1000.0" />
-                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="98.0" text="W"/>
+                     <Label fx:id="puissance" alignment="CENTER" prefHeight="40.0" prefWidth="80.0">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="30.0" text="W" textFill="WHITE">
+                        <font>
+                           <Font size="18.0" />
+                        </font></Label>
                   </HBox>
-                  <Label fx:id="puissance" alignment="CENTER" prefHeight="40.0" prefWidth="98.0" />
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding></VBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <children>
-                  <Label prefHeight="35.0" prefWidth="135.0" text="Temps :">
+                  <Label prefHeight="35.0" prefWidth="135.0" text="Temps :" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -70,7 +77,7 @@
                </padding></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
                <children>
-                  <Label prefHeight="35.0" prefWidth="150.0" text="Fréquence :">
+                  <Label prefHeight="35.0" prefWidth="150.0" text="Fréquence :" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -115,22 +122,17 @@
                </padding></HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Label alignment="TOP_CENTER" prefHeight="25.0" prefWidth="422.0" text="Temps durant lequel une ampoule de 60W doit">
+                  <Label alignment="TOP_CENTER" prefHeight="25.0" prefWidth="422.0" text="Temps durant lequel une ampoule de 60W doit rester allumée pour" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="422.0" text="rester allumée pour correspondre à l'énergie">
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="422.0" text="correspondre à l'énergie consommée par l'appareil après un an :" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="422.0" text="consommée par l'appareil après un an :">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="reponse" alignment="CENTER" prefHeight="40.0" prefWidth="475.0">
+                  <Label fx:id="reponse" alignment="CENTER" prefHeight="40.0" prefWidth="475.0" textFill="WHITE">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -148,9 +150,9 @@
    <top>
       <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="1130.0" text="Consommation d'énergie">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="1130.0" text="Consommation d'énergie" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Elephant" size="24.0" />
                </font></Label>
             <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
          </children>

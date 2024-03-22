@@ -11,15 +11,16 @@ import javafx.util.converter.NumberStringConverter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-public class DeplacementsEnArbres {
+public class ConsomCarburant {
 
     @FXML
     Slider slider;
     @FXML
     Label distance;
     @FXML
-    Label reponseDeplacement;
-
+    Spinner<Integer> spinnerQuantCarb;
+    @FXML
+    Label reponseCarburant;
     DecimalFormat df = new DecimalFormat("0.00");
 
     @FXML
@@ -27,17 +28,20 @@ public class DeplacementsEnArbres {
         Bindings.bindBidirectional(distance.textProperty(), slider.valueProperty(), new NumberStringConverter());
     }
 
-    public void jncpmcdc() throws IOException {
-        HelloApplication.changerScene("/consommationCarburant.fxml");
+    public String calculConsomCarb(int nbKm, int quantCarb){
+        return df.format((float)(quantCarb * 100L) / nbKm);
     }
 
-    public void convertir(){
-        //calculs
-        reponseDeplacement.setText(String.valueOf((int)3.010));
+    public void trouverConsomCarb(){
+        reponseCarburant.setText(calculConsomCarb((int) slider.getValue(), spinnerQuantCarb.getValue()));
     }
 
     public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
+    }
+
+    public void retour() throws IOException {
+        HelloApplication.changerScene("/deplacementArbres.fxml");
     }
 
 }
