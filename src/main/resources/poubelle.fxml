@@ -46,14 +46,14 @@
    <right>
       <VBox prefHeight="569.0" prefWidth="371.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="nomDechet" prefHeight="212.0" prefWidth="394.0">
+            <Label fx:id="nomDechet" prefHeight="212.0" prefWidth="394.0" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Elephant" size="24.0" />
                </font></Label>
             <ImageView fx:id="imageView" fitHeight="364.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="tempsDesint" prefHeight="212.0" prefWidth="394.0">
+            <Label fx:id="tempsDesint" prefHeight="212.0" prefWidth="394.0" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Elephant" size="24.0" />
                </font></Label>
          </children>
          <padding>

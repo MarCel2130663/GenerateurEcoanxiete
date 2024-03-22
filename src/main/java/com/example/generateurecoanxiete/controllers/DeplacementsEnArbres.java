@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
@@ -13,6 +15,8 @@ import java.text.DecimalFormat;
 
 public class DeplacementsEnArbres {
 
+    @FXML
+    BorderPane borderPane;
     @FXML
     Slider slider;
     @FXML
@@ -24,6 +28,9 @@ public class DeplacementsEnArbres {
 
     @FXML
     public void initialize(){
+        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:depArbresBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+
         Bindings.bindBidirectional(distance.textProperty(), slider.valueProperty(), new NumberStringConverter());
     }
 

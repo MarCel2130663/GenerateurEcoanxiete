@@ -14,9 +14,9 @@
    <top>
       <VBox prefHeight="105.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Déplacement converti en nombre d'arbres">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Déplacement converti en nombre d'arbres" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Elephant" size="24.0" />
                </font>
             </Label>
             <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
@@ -41,9 +41,9 @@
                <children>
                   <HBox prefHeight="60.0" prefWidth="306.0" spacing="10.0">
                         <Spinner max="30" min="1" />
-                        <Label text="L/100km" >
+                        <Label text="L/100km" textFill="WHITE">
                              <font>
-                                <Font size="14.0"/>
+                                <Font size="14.0" />
                              </font>
                         </Label>
                      <padding>
@@ -62,7 +62,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Consommation carburant :">
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Consommation carburant :" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -71,7 +71,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :">
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
@@ -81,12 +81,12 @@
                <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                   <children>
-                     <Label fx:id="distance" prefHeight="40.0" prefWidth="80.0">
+                     <Label fx:id="distance" prefHeight="40.0" prefWidth="80.0" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                     <Label prefHeight="40.0" prefWidth="30.0" text="km">
+                     <Label prefHeight="40.0" prefWidth="30.0" text="km" textFill="WHITE">
                         <font>
                            <Font size="18.0" />
                         </font>
@@ -111,12 +111,12 @@
             </VBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0">
+                  <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0" textFill="WHITE">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="46.0" prefWidth="98.0" text="arbres">
+                  <Label prefHeight="46.0" prefWidth="98.0" text="arbres" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
