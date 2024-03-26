@@ -40,7 +40,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
                <children>
                   <HBox prefHeight="60.0" prefWidth="306.0" spacing="10.0">
-                        <Spinner max="30" min="1" />
+                        <Spinner fx:id="spinner" max="30" min="1" />
                         <Label text="L/100km" textFill="WHITE">
                              <font>
                                 <Font size="14.0" />
@@ -109,22 +109,23 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </padding>
             </VBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0" textFill="WHITE">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="46.0" prefWidth="98.0" text="arbres" textFill="WHITE">
+                  <Label prefHeight="46.0" prefWidth="357.0" text="épinettes noires après 70 ans" textFill="WHITE">
                      <font>
-                        <Font size="18.0" />
-                     </font></Label>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
                <padding>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </padding>
-            </HBox>
+            </VBox>
          </children>
       </GridPane>
    </left>

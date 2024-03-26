@@ -62,8 +62,7 @@ public class Poubelle {
             }
             bouton.setOnAction(e -> {
                 nomDechet.setText(dechet.getNom());
-                System.out.println(dechet.getImage());
-                imageView.setImage(new Image(dechet.getImage().getUrl()));
+                imageView.setImage(new Image(dechet.getImage().getUrl(), 1000, 1000, false, true));
                 tempsDesint.setText(dechet.getTempsDesintegration());
             });
         }

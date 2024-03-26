@@ -18,13 +18,13 @@ public class DeplacementsEnArbres {
     @FXML
     BorderPane borderPane;
     @FXML
+    Spinner spinner;
+    @FXML
     Slider slider;
     @FXML
     Label distance;
     @FXML
     Label reponseDeplacement;
-
-    DecimalFormat df = new DecimalFormat("0.00");
 
     @FXML
     public void initialize(){
@@ -38,9 +38,12 @@ public class DeplacementsEnArbres {
         HelloApplication.changerScene("/consommationCarburant.fxml");
     }
 
+    public int calculEmission(int consomCarburant, int distance){
+        return (int) Math.round(((((consomCarburant * 2.392) / 100) * distance) / 140));
+    }
+
     public void convertir(){
-        //calculs
-        reponseDeplacement.setText(String.valueOf((int)3.010));
+        reponseDeplacement.setText(String.valueOf(calculEmission((int)spinner.getValue(), (int)slider.getValue())));
     }
 
     public void menu() throws IOException {

@@ -6,6 +6,7 @@
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Graphique">
@@ -30,41 +31,50 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <left>
-      <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
-         <children>
-            <ChoiceBox prefHeight="26.0" prefWidth="292.0">
-               <items>
-                  <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="Aucune" />
-                     <String fx:value="Semaine" />
-                     <String fx:value="Mois" />
-                     <String fx:value="Année" />
-                  </FXCollections>
-               </items>
-            </ChoiceBox>
-            <BarChart fx:id="barChart" prefHeight="647.0" prefWidth="586.0">
-              <xAxis>
-                <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="axeNombre" label="Nombre de déchets produits" minorTickCount="3" prefHeight="495.0" prefWidth="51.0" side="LEFT" upperBound="27.5" />
-              </yAxis>
-            </BarChart>
-         </children>
-      </VBox>
+      <StackPane prefHeight="646.0" prefWidth="484.0" BorderPane.alignment="CENTER">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="638.0" stroke="WHITE" strokeType="INSIDE" width="534.0" />
+         <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+            <children>
+               <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="292.0" value="Semaine">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Semaine" />
+                        <String fx:value="Mois" />
+                        <String fx:value="Année" />
+                     </FXCollections>
+                  </items>
+               </ChoiceBox>
+               <BarChart fx:id="barChart" prefHeight="647.0" prefWidth="586.0">
+                  <xAxis>
+                     <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                     <NumberAxis fx:id="axeNombre" label="Nombre de déchets produits" minorTickCount="3" prefHeight="495.0" prefWidth="51.0" side="LEFT" upperBound="27.5" />
+                  </yAxis>
+               </BarChart>
+            </children>
+         </VBox>
+      </StackPane>
+
    </left>
-   <right>
-      <VBox prefHeight="624.0" prefWidth="449.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-         <children>
-            <ScrollPane prefHeight="298.0" prefWidth="415.0">
-               <content>
-                  <VBox prefHeight="254.0" prefWidth="411.0" />
-               </content></ScrollPane>
-            <PieChart title="Aujourd'hui" />
-         </children>
-      </VBox>
-   </right>
+   <center>
+      <StackPane prefHeight="624.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="634.0" stroke="WHITE" strokeType="INSIDE" width="512.0" />
+         <VBox prefHeight="624.0" prefWidth="300.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <children>
+               <ScrollPane prefHeight="298.0" prefWidth="415.0">
+                  <content>
+                     <VBox fx:id="dechetsAujourdhui" prefHeight="254.0" prefWidth="411.0" spacing="20.0">
+                        <padding>
+                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding></VBox>
+                  </content></ScrollPane>
+               <PieChart title="Aujourd'hui" />
+            </children>
+         </VBox>
+      </StackPane>
+   </center>
 </BorderPane>
