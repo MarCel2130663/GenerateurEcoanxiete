@@ -15,66 +15,57 @@
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
-         <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="982.0" text="Mon graphique">
-               <font>
-                  <Font name="Elephant" size="24.0" />
-               </font>
-            </Label>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
+         <Label alignment="CENTER" prefHeight="50.0" prefWidth="982.0" text="Mon graphique">
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
+         <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
 
-         </children>
       </VBox>
    </top>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <left>
-      <StackPane prefHeight="646.0" prefWidth="484.0" BorderPane.alignment="CENTER">
+      <StackPane prefHeight="638.0" prefWidth="638.0" BorderPane.alignment="CENTER">
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="638.0" stroke="WHITE" strokeType="INSIDE" width="534.0" />
          <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
-            <children>
-               <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="292.0" value="Semaine">
-                  <items>
-                     <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Semaine" />
-                        <String fx:value="Mois" />
-                        <String fx:value="Année" />
-                     </FXCollections>
-                  </items>
-               </ChoiceBox>
-               <BarChart fx:id="barChart" prefHeight="647.0" prefWidth="586.0">
-                  <xAxis>
-                     <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
-                  </xAxis>
-                  <yAxis>
-                     <NumberAxis fx:id="axeNombre" label="Nombre de déchets produits" minorTickCount="3" prefHeight="495.0" prefWidth="51.0" side="LEFT" upperBound="27.5" />
-                  </yAxis>
-               </BarChart>
-            </children>
+            <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="292.0" value="Choisir une période">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Semaine" />
+                     <String fx:value="Mois" />
+                     <String fx:value="Année" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <BarChart fx:id="barChart" prefHeight="613.0" prefWidth="674.0">
+               <xAxis>
+                  <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="axeNombre" label="Nombre de déchets produits" minorTickCount="3" prefHeight="495.0" prefWidth="51.0" side="LEFT" upperBound="27.5" />
+               </yAxis>
+            </BarChart>
          </VBox>
       </StackPane>
 
    </left>
    <center>
-      <StackPane prefHeight="624.0" prefWidth="300.0" BorderPane.alignment="CENTER">
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="634.0" stroke="WHITE" strokeType="INSIDE" width="512.0" />
-         <VBox prefHeight="624.0" prefWidth="300.0" spacing="10.0" BorderPane.alignment="CENTER">
-            <padding>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-            <children>
-               <ScrollPane prefHeight="298.0" prefWidth="415.0">
-                  <content>
-                     <VBox fx:id="dechetsAujourdhui" prefHeight="254.0" prefWidth="411.0" spacing="20.0">
-                        <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                        </padding></VBox>
-                  </content></ScrollPane>
-               <PieChart title="Aujourd'hui" />
-            </children>
-         </VBox>
-      </StackPane>
+      <VBox prefHeight="620.0" prefWidth="336.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <PieChart fx:id="pieChart" title="Aujourd'hui" />
+         <ScrollPane prefHeight="298.0" prefWidth="415.0">
+            <VBox fx:id="dechetsAujourdhui" prefHeight="254.0" prefWidth="411.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </ScrollPane>
+      </VBox>
    </center>
 </BorderPane>

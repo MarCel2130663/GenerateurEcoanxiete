@@ -2,18 +2,18 @@ package com.example.generateurecoanxiete;
 
 import java.time.LocalDate;
 
-public class DonneeGraph {
+public class DonneePie {
 
-    private LocalDate date;
+    private String nom;
     private int nombre;
 
-    public DonneeGraph(LocalDate date, int nombre){
-        this.date = date;
+    public DonneePie(String nom, int nombre){
+        this.nom = nom;
         this.nombre = nombre;
     }
 
-    public LocalDate getDate(){
-        return date;
+    public String getNom(){
+        return nom;
     }
 
     public int getNombre(){
@@ -23,5 +23,6 @@ public class DonneeGraph {
     public void setNombre(int i){
         nombre = i;
     }
+
 
 }

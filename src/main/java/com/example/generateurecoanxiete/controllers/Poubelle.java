@@ -59,6 +59,8 @@ public class Poubelle {
             Button bouton = new Button(dechet.getNom());
             if(vBox != null){
                 vBox.getChildren().add(bouton);
+                bouton.setPrefSize(300, 50);
+                bouton.setStyle("-fx-font-size:18");
             }
             bouton.setOnAction(e -> {
                 nomDechet.setText(dechet.getNom());

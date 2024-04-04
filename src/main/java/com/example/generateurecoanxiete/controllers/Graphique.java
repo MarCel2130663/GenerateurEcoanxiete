@@ -1,14 +1,13 @@
 package com.example.generateurecoanxiete.controllers;
 
 import com.example.generateurecoanxiete.Dechet;
-import com.example.generateurecoanxiete.DonneeGraph;
+import com.example.generateurecoanxiete.DonneeBar;
+import com.example.generateurecoanxiete.DonneePie;
 import com.example.generateurecoanxiete.HelloApplication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
-import javafx.scene.control.Button;
+import javafx.scene.chart.*;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -20,7 +19,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Graphique {
 
@@ -34,7 +32,9 @@ public class Graphique {
     CategoryAxis axeDate;
     @FXML
     NumberAxis axeNombre;
-    XYChart.Series serie = new XYChart.Series();
+    XYChart.Series serie1 = new XYChart.Series();
+    @FXML
+    PieChart pieChart;
     @FXML
     VBox dechetsAujourdhui;
     List<Dechet> maPoubelle = new ArrayList<>();
@@ -46,7 +46,9 @@ public class Graphique {
             throw new RuntimeException(e);
         }
     }
-    List<DonneeGraph> donnees = new ArrayList<>();
+    List<DonneeBar> donneesBar = new ArrayList<>();
+    List<DonneePie> donneesPie = new ArrayList<>();
+    ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
 
     @FXML
     public void initialize(){
@@ -63,44 +65,76 @@ public class Graphique {
         }
 
         for(Dechet dechet1 : maPoubelle){
-            Label label = new Label(dechet1.getNom());
-            label.setScaleX(1.3);
-            label.setScaleY(1.3);
-            label.setTextAlignment(TextAlignment.LEFT);
-            //aligner texte
-            if(dechetsAujourdhui != null) {
-                dechetsAujourdhui.getChildren().add(label);
+            if(dechet1.getDate().equals(LocalDate.now())){
+                Label label = new Label(dechet1.getNom());
+                label.setScaleX(1.3);
+                label.setScaleY(1.3);
+                label.setTextAlignment(TextAlignment.LEFT);
+                //aligner texte
+                if(dechetsAujourdhui != null) {
+                    dechetsAujourdhui.getChildren().add(label);
+                }
             }
         }
 
-        //boucle sur nos dechets
+        //donnees bar chart
         for (Dechet dechet2 : maPoubelle) {
             //bool pour savoir si on a deja ce dechet dans la liste du graph
             boolean estTrouve = false;
-            if(donnees.isEmpty()) {
-                donnees.add(new DonneeGraph(dechet2.getDate(), 0));
+            if(donneesBar.isEmpty()) {
+                donneesBar.add(new DonneeBar(dechet2.getDate(), 0));
             }
             //boucle sur les dechetgraphs
-            for (DonneeGraph donnee : donnees) {
-                if (donnee.getDate().equals(dechet2.getDate())) {
-                    donnee.setNombre(donnee.getNombre() + 1);
+            for (DonneeBar donnee1 : donneesBar) {
+                if (donnee1.getDate().equals(dechet2.getDate())) {
+                    donnee1.setNombre(donnee1.getNombre() + 1);
                     estTrouve = true;
                 }
 
             }
             //si aucun dechet trouve dans listegraph on ajoute un nouvel element
             if(!estTrouve){
-                donnees.add(new DonneeGraph(dechet2.getDate(), 1));
+                donneesBar.add(new DonneeBar(dechet2.getDate(), 1));
             }
         }
+        for(DonneeBar donnee : donneesBar){
+            serie1.getData().add(new XYChart.Data<>(String.valueOf(donnee.getDate()), donnee.getNombre()));
+        }
+        barChart.getData().addAll(serie1);
 
-        if(choiceBox.getValue().equals("Semaine")){
-            for(DonneeGraph donnee : donnees){
-                serie.getData().add(new XYChart.Data<>(String.valueOf(donnee.getDate()), donnee.getNombre()));
+        //donnees pie chart
+        for (Dechet dechet3 : maPoubelle) {
+            //bool pour savoir si on a deja ce dechet dans la liste du graph
+            if(Objects.equals(dechet3.getDate(), LocalDate.now())){
+                boolean estTrouve = false;
+                if(donneesPie.isEmpty()) {
+                    donneesPie.add(new DonneePie(dechet3.getNom(), 0));
+                }
+                //boucle sur les dechetgraphs
+                for (DonneePie donnee2 : donneesPie) {
+                    if (donnee2.getNom().equals(dechet3.getNom())) {
+                        donnee2.setNombre(donnee2.getNombre() + 1);
+                        estTrouve = true;
+                    }
+
+                }
+                //si aucun dechet trouve dans listegraph on ajoute un nouvel element
+                if(!estTrouve){
+                    donneesPie.add(new DonneePie(dechet3.getNom(), 1));
+                }
             }
-            barChart.getData().addAll(serie);
         }
+        for(DonneePie donnee3 : donneesPie){
+            pieChartData.add(new PieChart.Data(donnee3.getNom(), donnee3.getNombre()));
+        }
+        pieChart.setData(pieChartData);
+
     }
+
+    //lier avec la choice box
+    //semaine: empiler les donnees du fichier dans un stack et pop les 7 dernieres.
+    //mois: empiler les donnees du fichier dans un stack et pop les 30 dernieres.
+    //annee: empiler les donnees du fichier dans un stack et pop les 365 dernieres.
 
     public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
