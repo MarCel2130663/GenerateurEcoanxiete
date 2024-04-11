@@ -29,8 +29,8 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <left>
-      <StackPane prefHeight="638.0" prefWidth="638.0" BorderPane.alignment="CENTER">
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="638.0" stroke="WHITE" strokeType="INSIDE" width="534.0" />
+      <StackPane prefHeight="638.0" prefWidth="868.0" BorderPane.alignment="CENTER">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="638.0" stroke="WHITE" strokeType="INSIDE" width="870.0" />
          <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
             <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="292.0" value="Choisir une période">
                <items>

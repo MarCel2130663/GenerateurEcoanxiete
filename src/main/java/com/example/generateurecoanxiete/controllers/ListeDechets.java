@@ -122,7 +122,6 @@ public class ListeDechets {
         });
         for (Dechet dechet : poubelle) {
             try {
-                System.out.print(dechet.convertirCSV());
                 fw.write(dechet.convertirCSV());
             } catch (IOException e) {
                 throw new RuntimeException(e);

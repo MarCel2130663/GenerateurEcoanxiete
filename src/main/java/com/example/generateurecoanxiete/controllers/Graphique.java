@@ -4,6 +4,7 @@ import com.example.generateurecoanxiete.Dechet;
 import com.example.generateurecoanxiete.DonneeBar;
 import com.example.generateurecoanxiete.DonneePie;
 import com.example.generateurecoanxiete.HelloApplication;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.text.TextAlignment;
+import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -130,6 +132,8 @@ public class Graphique {
         pieChart.setData(pieChartData);
 
     }
+
+
 
     //lier avec la choice box
     //semaine: empiler les donnees du fichier dans un stack et pop les 7 dernieres.
