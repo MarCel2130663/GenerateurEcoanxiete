@@ -1,4 +1,4 @@
-package com.example.generateurecoanxiete;
+package com.example.generateurecoanxiete.objets;
 
 import java.time.LocalDate;
 

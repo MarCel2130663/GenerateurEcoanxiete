@@ -1,6 +1,6 @@
 package com.example.generateurecoanxiete.controllers;
 
-import com.example.generateurecoanxiete.Dechet;
+import com.example.generateurecoanxiete.objets.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;

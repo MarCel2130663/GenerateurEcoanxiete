@@ -32,7 +32,7 @@
       <StackPane prefHeight="638.0" prefWidth="868.0" BorderPane.alignment="CENTER">
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="638.0" stroke="WHITE" strokeType="INSIDE" width="870.0" />
          <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
-            <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="292.0" value="Choisir une période">
+            <ChoiceBox fx:id="choiceBox" onAction="#choiceBoxOnAction" prefHeight="26.0" prefWidth="292.0" value="Choisir une période">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <String fx:value="Semaine" />

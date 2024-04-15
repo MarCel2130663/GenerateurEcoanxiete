@@ -1,10 +1,9 @@
 package com.example.generateurecoanxiete.controllers;
 
-import com.example.generateurecoanxiete.Dechet;
-import com.example.generateurecoanxiete.DonneeBar;
-import com.example.generateurecoanxiete.DonneePie;
+import com.example.generateurecoanxiete.objets.Dechet;
+import com.example.generateurecoanxiete.objets.DonneeBar;
+import com.example.generateurecoanxiete.objets.DonneePie;
 import com.example.generateurecoanxiete.HelloApplication;
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.text.TextAlignment;
-import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -133,12 +131,43 @@ public class Graphique {
 
     }
 
+    public void choiceBoxOnAction(){
+        Stack<DonneeBar> stack = new Stack<>();
+        for(DonneeBar donnee : donneesBar){
+            stack.add(donnee);
+        }
+        XYChart.Series serie = new XYChart.Series();
 
-
-    //lier avec la choice box
-    //semaine: empiler les donnees du fichier dans un stack et pop les 7 dernieres.
-    //mois: empiler les donnees du fichier dans un stack et pop les 30 dernieres.
-    //annee: empiler les donnees du fichier dans un stack et pop les 365 dernieres.
+        if(choiceBox.getValue().equals("Semaine")){
+            DonneeBar a = stack.pop();
+            for(int i = 0; i < 7; i++){
+                if(a != null){
+                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+                }
+            }
+        }
+        else if(choiceBox.getValue().equals("Mois")){
+            DonneeBar a = stack.pop();
+            for(int i = 0; i < 30; i++){
+                if(a != null){
+                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+                }
+            }
+        }
+        else if(choiceBox.getValue().equals("Année")){
+            DonneeBar a = stack.pop();
+            for(int i = 0; i < 365; i++){
+                if(a != null){
+                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+                }
+            }
+        }
+        if(serie != null)
+            barChart.getData().addAll(serie);
+        else
+            barChart.getData().add(serie1);
+        stack.clear();
+    }
 
     public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");

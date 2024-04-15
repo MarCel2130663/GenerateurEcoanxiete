@@ -1,10 +1,9 @@
 package com.example.generateurecoanxiete.controllers;
 
-import com.example.generateurecoanxiete.Dechet;
+import com.example.generateurecoanxiete.objets.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -17,7 +16,6 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Poubelle {
 
@@ -74,13 +72,14 @@ public class Poubelle {
         HelloApplication.changerScene("/graphique.fxml");
     }
 
-    public void retourPoubelle() throws IOException {
+    public void retour() throws IOException {
         HelloApplication.changerScene("/listeDechets.fxml");
     }
 
     public void viderPoubelle(){
         //pop un avertissement
-        poubelle.clear();
+        vBox.getChildren().clear();
+        //poubelle.clear();
     }
 
     public void menu() throws IOException {

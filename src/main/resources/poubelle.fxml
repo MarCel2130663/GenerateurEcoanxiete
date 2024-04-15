@@ -15,7 +15,7 @@
                   <Font name="Elephant" size="24.0" />
                </font></Label>
             <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
-            <Button mnemonicParsing="false" onAction="#retourPoubelle" text="Retour" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
 
 
          </children>
@@ -36,13 +36,6 @@
             <VBox fx:id="vBox" prefHeight="524.0" prefWidth="549.0" />
          </content></ScrollPane>
    </center>
-   <bottom>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#voirGraphique" prefHeight="55.0" prefWidth="255.0" text="Voir mon graphique" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-   </bottom>
    <right>
       <VBox prefHeight="574.0" prefWidth="593.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -61,4 +54,19 @@
          </padding>
       </VBox>
    </right>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voirGraphique" text="Voir mon graphique">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
 </BorderPane>
