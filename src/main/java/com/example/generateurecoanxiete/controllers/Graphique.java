@@ -132,41 +132,28 @@ public class Graphique {
     }
 
     public void choiceBoxOnAction(){
-        Stack<DonneeBar> stack = new Stack<>();
-        for(DonneeBar donnee : donneesBar){
-            stack.add(donnee);
-        }
+        Queue<DonneeBar> queue = new LinkedList<>(donneesBar);
+        barChart.getData().clear();
         XYChart.Series serie = new XYChart.Series();
+        int j = 0;
 
         if(choiceBox.getValue().equals("Semaine")){
-            DonneeBar a = stack.pop();
-            for(int i = 0; i < 7; i++){
-                if(a != null){
-                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
-                }
-            }
+            j = 7;
         }
         else if(choiceBox.getValue().equals("Mois")){
-            DonneeBar a = stack.pop();
-            for(int i = 0; i < 30; i++){
-                if(a != null){
-                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
-                }
-            }
+            j = 30;
         }
         else if(choiceBox.getValue().equals("Année")){
-            DonneeBar a = stack.pop();
-            for(int i = 0; i < 365; i++){
-                if(a != null){
-                    serie1.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
-                }
+            j = 365;
+        }
+        for(int i = 0; i < j; i++){
+            DonneeBar a = queue.poll();
+            if(a != null){
+                serie.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
             }
         }
-        if(serie != null)
-            barChart.getData().addAll(serie);
-        else
-            barChart.getData().add(serie1);
-        stack.clear();
+        barChart.getData().addAll(serie);
+        queue.clear();
     }
 
     public void menu() throws IOException {
