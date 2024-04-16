@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Graphique {
@@ -27,12 +28,11 @@ public class Graphique {
     @FXML
     ChoiceBox choiceBox;
     @FXML
-    BarChart barChart;
+    CategoryAxis axeDate = new CategoryAxis();
     @FXML
-    CategoryAxis axeDate;
+    NumberAxis axeNombre = new NumberAxis();
     @FXML
-    NumberAxis axeNombre;
-    XYChart.Series serie1 = new XYChart.Series();
+    BarChart<String, Number> barChart = new BarChart<>(axeDate, axeNombre);
     @FXML
     PieChart pieChart;
     @FXML
@@ -97,10 +97,6 @@ public class Graphique {
                 donneesBar.add(new DonneeBar(dechet2.getDate(), 1));
             }
         }
-        for(DonneeBar donnee : donneesBar){
-            serie1.getData().add(new XYChart.Data<>(String.valueOf(donnee.getDate()), donnee.getNombre()));
-        }
-        barChart.getData().addAll(serie1);
 
         //donnees pie chart
         for (Dechet dechet3 : maPoubelle) {
@@ -132,8 +128,8 @@ public class Graphique {
     }
 
     public void choiceBoxOnAction(){
-        Queue<DonneeBar> queue = new LinkedList<>(donneesBar);
         barChart.getData().clear();
+        Queue<DonneeBar> queue = new LinkedList<>(donneesBar);
         XYChart.Series serie = new XYChart.Series();
         int j = 0;
 
@@ -147,11 +143,18 @@ public class Graphique {
             j = 365;
         }
         for(int i = 0; i < j; i++){
-            DonneeBar a = queue.poll();
-            if(a != null){
-                serie.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+            if(!queue.isEmpty()){
+                DonneeBar a = queue.poll();
+                if (!queue.isEmpty()){
+                    DonneeBar b = queue.peek();
+                    if(ChronoUnit.DAYS.between(b.getDate(), a.getDate()) != 1){
+                        queue.add(new DonneeBar(a.getDate().minusDays(1), 0));
+                    }
+                    serie.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+                }
             }
         }
+
         barChart.getData().addAll(serie);
         queue.clear();
     }
