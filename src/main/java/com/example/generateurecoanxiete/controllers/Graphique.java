@@ -129,9 +129,15 @@ public class Graphique {
 
     public void choiceBoxOnAction(){
         barChart.getData().clear();
-        Queue<DonneeBar> queue = new LinkedList<>(donneesBar);
+        Stack<DonneeBar> stack = new Stack<>();
+        stack.addAll(donneesBar);
+        Stack<DonneeBar> stack2 = new Stack<>();
         XYChart.Series serie = new XYChart.Series();
         int j = 0;
+
+        if(!Objects.equals(stack.peek().getDate(), LocalDate.now())){
+            stack.add(new DonneeBar(LocalDate.now(), 0));
+        }
 
         if(choiceBox.getValue().equals("Semaine")){
             j = 7;
@@ -143,20 +149,30 @@ public class Graphique {
             j = 365;
         }
         for(int i = 0; i < j; i++){
-            if(!queue.isEmpty()){
-                DonneeBar a = queue.poll();
-                if (!queue.isEmpty()){
-                    DonneeBar b = queue.peek();
+            if(!stack.isEmpty()){
+                DonneeBar a = stack.pop();
+                if (!stack.isEmpty()){
+                    DonneeBar b = stack.peek();
                     if(ChronoUnit.DAYS.between(b.getDate(), a.getDate()) != 1){
-                        queue.add(new DonneeBar(a.getDate().minusDays(1), 0));
+                        stack.add(new DonneeBar(a.getDate().minusDays(1), 0));
                     }
-                    serie.getData().add(new XYChart.Data<>(String.valueOf(a.getDate()), a.getNombre()));
+                    stack2.add(a);
                 }
             }
+            else{
+                stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i), 0));
+                stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i + 1), 0));
+            }
         }
-
+        for(int i = 0; i < j; i++){
+            if(!stack2.isEmpty()){
+                DonneeBar c = stack2.pop();
+                System.out.println(c.getDate() + " : " + c.getNombre() + " | " + (stack2.size() + 1));
+                serie.getData().add(new XYChart.Data<>(String.valueOf(c.getDate()), c.getNombre()));
+            }
+        }
+        System.out.println("--------------------------------------------------------");
         barChart.getData().addAll(serie);
-        queue.clear();
     }
 
     public void menu() throws IOException {
