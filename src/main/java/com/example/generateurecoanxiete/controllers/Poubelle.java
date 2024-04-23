@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -42,8 +43,7 @@ public class Poubelle {
     }
 
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        HelloApplication.setFond(borderPane);
 
         for (String dechet : poubelle) {
             String[] infos = dechet.split(", ");
@@ -76,10 +76,12 @@ public class Poubelle {
         HelloApplication.changerScene("/listeDechets.fxml");
     }
 
-    public void viderPoubelle(){
+    public void viderPoubelle() throws IOException {
         //pop un avertissement
         vBox.getChildren().clear();
-        //poubelle.clear();
+        poubelle.clear();
+        FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", false);
+        fw.write("");
     }
 
     public void menu() throws IOException {

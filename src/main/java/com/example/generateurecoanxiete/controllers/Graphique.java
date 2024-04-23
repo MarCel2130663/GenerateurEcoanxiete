@@ -52,8 +52,7 @@ public class Graphique {
 
     @FXML
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        HelloApplication.setFond(borderPane);
 
         for (String dechet : poubelle) {
             String[] infos = dechet.split(", ");
@@ -132,11 +131,14 @@ public class Graphique {
         Stack<DonneeBar> stack = new Stack<>();
         stack.addAll(donneesBar);
         Stack<DonneeBar> stack2 = new Stack<>();
+        List<XYChart.Data> listeFinale = new ArrayList<>();
         XYChart.Series serie = new XYChart.Series();
         int j = 0;
 
-        if(!Objects.equals(stack.peek().getDate(), LocalDate.now())){
-            stack.add(new DonneeBar(LocalDate.now(), 0));
+        if(!stack.isEmpty()){
+            if(!Objects.equals(stack.peek().getDate(), LocalDate.now())){
+                stack.add(new DonneeBar(LocalDate.now(), 0));
+            }
         }
 
         if(choiceBox.getValue().equals("Semaine")){
@@ -148,6 +150,7 @@ public class Graphique {
         else if(choiceBox.getValue().equals("Année")){
             j = 365;
         }
+
         for(int i = 0; i < j; i++){
             if(!stack.isEmpty()){
                 DonneeBar a = stack.pop();
@@ -158,8 +161,14 @@ public class Graphique {
                     }
                     stack2.add(a);
                 }
+                else{
+                    stack2.add(a);
+                    stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i), 0));
+                    stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i + 1), 0));
+                }
             }
             else{
+                stack2.add(new DonneeBar(LocalDate.now(), 0));
                 stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i), 0));
                 stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i + 1), 0));
             }
@@ -167,11 +176,9 @@ public class Graphique {
         for(int i = 0; i < j; i++){
             if(!stack2.isEmpty()){
                 DonneeBar c = stack2.pop();
-                System.out.println(c.getDate() + " : " + c.getNombre() + " | " + (stack2.size() + 1));
-                serie.getData().add(new XYChart.Data<>(String.valueOf(c.getDate()), c.getNombre()));
+                serie.getData().addAll(new XYChart.Data(String.valueOf(c.getDate()), c.getNombre()));
             }
         }
-        System.out.println("--------------------------------------------------------");
         barChart.getData().addAll(serie);
     }
 

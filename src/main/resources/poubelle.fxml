@@ -10,7 +10,7 @@
    <top>
       <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Ma poubelle">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Ma poubelle" textFill="WHITE">
                <font>
                   <Font name="Elephant" size="24.0" />
                </font></Label>

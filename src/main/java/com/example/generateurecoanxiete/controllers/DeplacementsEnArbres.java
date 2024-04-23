@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 
@@ -25,13 +26,16 @@ public class DeplacementsEnArbres {
     Label distance;
     @FXML
     Label reponseDeplacement;
+    @FXML
+    ImageView imageView;
 
     @FXML
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:depArbresBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        HelloApplication.setFond(borderPane);
 
         Bindings.bindBidirectional(distance.textProperty(), slider.valueProperty(), new NumberStringConverter());
+
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
     }
 
     public void jncpmcdc() throws IOException {

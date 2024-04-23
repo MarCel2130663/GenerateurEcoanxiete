@@ -22,10 +22,10 @@
             <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
          </children></VBox>
    </top>
-   <right>
-      <ImageView fitHeight="685.0" fitWidth="334.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-   </right>
    <left>
+      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
       <GridPane prefHeight="666.0" prefWidth="671.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -60,22 +60,28 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </padding>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Consommation carburant :" textFill="WHITE">
+                  <Label prefHeight="65.0" prefWidth="243.0" text="Consommation carburant :" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
                </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.rowIndex="1">
                <children>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :" textFill="WHITE">
+                  <Label prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
                </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
             </VBox>
             <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
                <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
@@ -128,5 +134,5 @@
             </VBox>
          </children>
       </GridPane>
-   </left>
+   </center>
 </BorderPane>

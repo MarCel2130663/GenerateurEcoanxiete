@@ -5,6 +5,7 @@ import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 
@@ -29,13 +30,16 @@ public class ConsomEnergie {
     Label reponse;
     @FXML
     BorderPane borderPane;
+    @FXML
+    ImageView imageView;
 
     @FXML
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:consomEnergieBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        HelloApplication.setFond(borderPane);
 
         Bindings.bindBidirectional(puissance.textProperty(), slider.valueProperty(), new NumberStringConverter());
+
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
     }
 
     public double heureMinSecEnSec(int heure, int minute, int seconde){

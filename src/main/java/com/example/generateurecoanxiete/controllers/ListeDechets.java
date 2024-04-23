@@ -5,6 +5,7 @@ import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 import java.io.FileWriter;
@@ -61,6 +62,8 @@ public class ListeDechets {
     CheckBox servietteTampon;
     @FXML
     CheckBox verre;
+    @FXML
+    ImageView imageView;
     List<CheckBox> listeCheckBoxes = new ArrayList<>();
     List<String> allLines;
     {
@@ -77,8 +80,9 @@ public class ListeDechets {
     }
 
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:dechetsBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        HelloApplication.setFond(borderPane);
+
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
 
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
