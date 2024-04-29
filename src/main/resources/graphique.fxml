@@ -6,7 +6,6 @@
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Graphique">
@@ -30,7 +29,7 @@
    </padding>
    <left>
       <VBox prefHeight="624.0" prefWidth="586.0" BorderPane.alignment="CENTER">
-         <ChoiceBox fx:id="choiceBox" onAction="#choiceBoxOnAction" prefHeight="26.0" prefWidth="292.0" value="Choisir une période">
+         <ChoiceBox fx:id="choiceBox" onAction="#choiceBoxOnAction" prefHeight="26.0" prefWidth="292.0" value="Choisir une période" style="-fx-background-radius: 30">
             <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Semaine" />
@@ -39,7 +38,7 @@
                </FXCollections>
             </items>
          </ChoiceBox>
-         <BarChart fx:id="barChart" animated="false" prefHeight="613.0" prefWidth="674.0">
+         <BarChart fx:id="barChart" animated="false" prefHeight="613.0" prefWidth="674.0" style="-fx-background-color: #f3f3f3">
             <xAxis>
                <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM" />
             </xAxis>

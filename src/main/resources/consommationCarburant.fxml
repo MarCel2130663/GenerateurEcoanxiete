@@ -18,8 +18,8 @@
                   <Font name="Elephant" size="24.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
-            <Button mnemonicParsing="false" onAction="#menu" prefHeight="25.0" prefWidth="52.0" text="Menu" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3"/>
+            <Button mnemonicParsing="false" onAction="#menu" prefHeight="25.0" prefWidth="52.0" text="Menu" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3"/>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -94,7 +94,7 @@
                </padding></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="trouverConsomCarb" mnemonicParsing="false" onAction="#trouverConsomCarb" prefHeight="52.0" prefWidth="260.0" text="Trouver ma consommation">
+                  <Button fx:id="trouverConsomCarb" mnemonicParsing="false" onAction="#trouverConsomCarb" prefHeight="52.0" prefWidth="260.0" text="Trouver ma consommation" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                      <font>
                         <Font size="18.0" />
                      </font>

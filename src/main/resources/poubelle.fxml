@@ -57,8 +57,8 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" />
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voirGraphique" text="Voir mon graphique">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3"/>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voirGraphique" text="Voir mon graphique" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="18.0" />
                </font>

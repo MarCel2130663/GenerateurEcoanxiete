@@ -14,8 +14,8 @@ public class Accueil {
 
     @FXML
     public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:accueilBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
+        //borderPane.setBackground(new Background(new BackgroundImage(new Image("file:accueilBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
+                //BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
     }
 
     public void menu() throws IOException {

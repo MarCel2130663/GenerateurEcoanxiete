@@ -32,7 +32,7 @@ public class HelloApplication extends Application {
 
         HelloApplication.stage = stage;
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/accueil.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/menu.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1500, 800);
             stage.setTitle("Generateur d'ecoanxiete");
             stage.setScene(scene);

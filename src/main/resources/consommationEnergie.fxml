@@ -117,7 +117,7 @@
                </padding></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
                <children>
-                  <Button mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir ">
+                  <Button mnemonicParsing="false" onAction="#convertir" prefHeight="52.0" prefWidth="198.0" text="Convertir" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                      <font>
                         <Font size="24.0" />
                      </font>
