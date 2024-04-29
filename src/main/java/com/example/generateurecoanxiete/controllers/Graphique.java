@@ -38,10 +38,10 @@ public class Graphique {
     @FXML
     VBox dechetsAujourdhui;
     List<Dechet> maPoubelle = new ArrayList<>();
-    List<String> poubelle;
+    List<String> poubelleUtilisateur;
     {
         try {
-            poubelle = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
+            poubelleUtilisateur = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -54,7 +54,7 @@ public class Graphique {
     public void initialize(){
         HelloApplication.setFond(borderPane);
 
-        for (String dechet : poubelle) {
+        for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");
             if (!dechet.isEmpty()) {
                 maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.parse(infos[3])));

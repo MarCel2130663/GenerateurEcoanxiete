@@ -1,13 +1,13 @@
 package com.example.generateurecoanxiete.testsUnitaires;
 
-import com.example.generateurecoanxiete.controllers.DeplacementsEnArbres;
+import com.example.generateurecoanxiete.controllers.DeplacementArbres;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class TestDeplacementArbres {
 
-    DeplacementsEnArbres testDepArbres = new DeplacementsEnArbres();
+    DeplacementArbres testDepArbres = new DeplacementArbres();
 
     @Test
     public void testDeplacementArbres(){

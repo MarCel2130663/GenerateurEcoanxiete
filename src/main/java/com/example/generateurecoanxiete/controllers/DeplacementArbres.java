@@ -6,15 +6,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
-import java.text.DecimalFormat;
 
-public class DeplacementsEnArbres {
+public class DeplacementArbres {
 
     @FXML
     BorderPane borderPane;

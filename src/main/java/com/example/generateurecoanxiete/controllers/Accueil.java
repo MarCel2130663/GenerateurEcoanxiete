@@ -18,11 +18,11 @@ public class Accueil {
                 BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
     }
 
-    public void menuAccueil() throws IOException {
+    public void menu() throws IOException {
         HelloApplication.changerScene("/menu.fxml");
     }
 
-    public void creditsAccueil() throws IOException {
+    public void credits() throws IOException {
         HelloApplication.changerScene("/credits.fxml");
     }
 

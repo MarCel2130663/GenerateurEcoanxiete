@@ -33,10 +33,10 @@ public class Poubelle {
     @FXML
     Label tempsDesint;
     List<Dechet> maPoubelle = new ArrayList<>();
-    List<String> poubelle;
+    List<String> poubelleUtilisateur;
     {
         try {
-            poubelle = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
+            poubelleUtilisateur = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -45,7 +45,7 @@ public class Poubelle {
     public void initialize(){
         HelloApplication.setFond(borderPane);
 
-        for (String dechet : poubelle) {
+        for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");
             if (!dechet.isEmpty()) {
                 maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.now()));
@@ -79,7 +79,7 @@ public class Poubelle {
     public void viderPoubelle() throws IOException {
         //pop un avertissement
         vBox.getChildren().clear();
-        poubelle.clear();
+        poubelleUtilisateur.clear();
         FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", false);
         fw.write("");
     }
