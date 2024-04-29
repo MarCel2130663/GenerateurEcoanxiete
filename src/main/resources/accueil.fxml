@@ -17,12 +17,12 @@
    </top>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
-            <Button mnemonicParsing="false" onAction="#menu" prefHeight="50.0" prefWidth="250.0" text="Menu" style="-fx-background-color:#c4c4c4; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
+            <Button mnemonicParsing="false" onAction="#menu" prefHeight="50.0" prefWidth="250.0" text="Menu" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#credits" prefHeight="50.0" prefWidth="250.0" text="Crédits">
+            <Button mnemonicParsing="false" onAction="#credits" prefHeight="50.0" prefWidth="250.0" text="Crédits" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="24.0" />
                </font></Button>

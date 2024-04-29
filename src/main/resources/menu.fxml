@@ -15,19 +15,19 @@
    <center>
       <VBox alignment="CENTER" prefHeight="624.0" prefWidth="764.0" spacing="75.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="350.0" text="Déplacement en arbres">
+            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="350.0" text="Déplacement en arbres" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets">
+            <Button mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="350.0" text="Consommation d'énergie" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="350.0" text="Consommation d'énergie" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3" />
          </children>
       </VBox>
    </center>
