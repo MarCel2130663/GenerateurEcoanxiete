@@ -10,22 +10,23 @@
       <Insets bottom="20.0" right="20.0" top="20.0" />
    </padding>
    <top>
-      <Label alignment="CENTER" prefHeight="49.0" prefWidth="924.0" text="Générateur d'écoanxiété" textFill="#d0d8c1" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Trebuchet MS Bold" size="60.0" />
-         </font></Label>
+
    </top>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
-            <Button mnemonicParsing="false" onAction="#menu" prefHeight="50.0" prefWidth="250.0" text="Menu" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
-               <font>
-                  <Font name="Trebuchet MS" size="36.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#credits" prefHeight="50.0" prefWidth="250.0" text="Crédits" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
-               <font>
-                  <Font name="Trebuchet MS" size="36.0" />
-               </font></Button>
+         <Label alignment="CENTER" prefHeight="49.0" prefWidth="924.0" text="Générateur d'écoanxiété" textFill="#d0d8c1" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Trebuchet MS Bold" size="60.0" />
+            </font></Label>
+         <Button mnemonicParsing="false" onAction="#menu" prefHeight="50.0" prefWidth="250.0" text="Menu" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
+            <font>
+               <Font name="Trebuchet MS" size="36.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#credits" prefHeight="50.0" prefWidth="250.0" text="Crédits" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
+            <font>
+               <Font name="Trebuchet MS" size="36.0" />
+            </font></Button>
          <padding>
             <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
          </padding>

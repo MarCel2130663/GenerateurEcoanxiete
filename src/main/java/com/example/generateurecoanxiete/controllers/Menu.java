@@ -13,12 +13,6 @@ public class Menu {
     @FXML
     BorderPane borderPane;
 
-    @FXML
-    public void initialize(){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:accueilBG.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
-    }
-
     public void deplacement() throws IOException {
         HelloApplication.changerScene("/deplacementArbres.fxml");
     }

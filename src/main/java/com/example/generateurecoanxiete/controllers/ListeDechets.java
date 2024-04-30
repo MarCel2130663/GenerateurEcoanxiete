@@ -80,7 +80,6 @@ public class ListeDechets {
     }
 
     public void initialize(){
-        HelloApplication.setFond(borderPane);
 
         imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
 

@@ -35,10 +35,7 @@ public class ConsomEnergie {
 
     @FXML
     public void initialize(){
-        HelloApplication.setFond(borderPane);
-
         Bindings.bindBidirectional(puissance.textProperty(), slider.valueProperty(), new NumberStringConverter());
-
         imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
     }
 

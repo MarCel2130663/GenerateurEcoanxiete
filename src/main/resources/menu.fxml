@@ -5,29 +5,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Menu">
-   <top>
-      <Label alignment="CENTER" prefHeight="50.0" prefWidth="306.0" text="Menu" textFill="WHITE" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Elephant" size="24.0" />
-         </font></Label>
-   </top>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Menu">
+
    <center>
       <VBox alignment="CENTER" prefHeight="624.0" prefWidth="764.0" spacing="75.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="350.0" text="Déplacement en arbres" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="306.0" text="Menu" textFill="WHITE" BorderPane.alignment="CENTER" style="-fx-text-fill: #d0d8c1">
                <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <Button mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="350.0" text="Suivi des déchets" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
+                  <Font name="Trebuchet MS Bold" size="60.0"/>
+               </font></Label>
+            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="400.0" text="Déplacement en arbres" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Trebuchet MS" size="28.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="350.0" text="Consommation d'énergie" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3">
+            <Button mnemonicParsing="false" onAction="#suiviDechets" prefHeight="65.0" prefWidth="400.0" text="Suivi des déchets" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Trebuchet MS" size="28.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#383330; -fx-background-radius: 30" textAlignment="CENTER" textFill="#f3f3f3" />
+            <Button mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="400.0" text="Consommation d'énergie" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
+               <font>
+                  <Font name="Trebuchet MS" size="28.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
+            <font>
+               <Font name="Trebuchet MS" size="20.0" />
+            </font></Button>
          </children>
       </VBox>
    </center>

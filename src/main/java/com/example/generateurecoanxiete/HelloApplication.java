@@ -22,11 +22,6 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
     }
 
-    public static void setFond(BorderPane borderPane){
-        borderPane.setBackground(new Background(new BackgroundImage(new Image("file:fond.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true))));
-    }
-
     @Override
     public void start(Stage stage){
 

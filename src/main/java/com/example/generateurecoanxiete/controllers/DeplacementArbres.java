@@ -29,10 +29,7 @@ public class DeplacementArbres {
 
     @FXML
     public void initialize(){
-        HelloApplication.setFond(borderPane);
-
         Bindings.bindBidirectional(distance.textProperty(), slider.valueProperty(), new NumberStringConverter());
-
         imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
     }
 

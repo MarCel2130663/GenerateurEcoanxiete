@@ -52,7 +52,6 @@ public class Graphique {
 
     @FXML
     public void initialize(){
-        HelloApplication.setFond(borderPane);
 
         for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");

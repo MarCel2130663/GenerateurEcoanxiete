@@ -43,7 +43,6 @@ public class Poubelle {
     }
 
     public void initialize(){
-        HelloApplication.setFond(borderPane);
 
         for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");
