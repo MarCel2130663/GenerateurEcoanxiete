@@ -23,7 +23,7 @@ public class DeplacementArbres {
     @FXML
     Label distance;
     @FXML
-    Label reponseDeplacement;
+    Label reponse;
     @FXML
     ImageView imageView;
 
@@ -42,7 +42,7 @@ public class DeplacementArbres {
     }
 
     public void convertir(){
-        reponseDeplacement.setText(String.valueOf(calculEmission((int)spinner.getValue(), (int)slider.getValue())));
+        reponse.setText(String.valueOf(calculEmission((int)spinner.getValue(), (int)slider.getValue())));
     }
 
     public void menu() throws IOException {

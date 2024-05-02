@@ -6,136 +6,115 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.DeplacementArbres">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #3d4b65" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.DeplacementArbres">
 
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <top>
-      <VBox prefHeight="105.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Déplacement en arbres" textFill="WHITE">
+      <VBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER">
+            <Label text="Déplacement en arbres" textFill="#d8dbe0">
                <font>
-                  <Font name="Elephant" size="24.0" />
+                  <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
+            <Button mnemonicParsing="false" onAction="#menu" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Menu" textAlignment="CENTER" textFill="#d8dbe0">
             <font>
                <Font name="Trebuchet MS" size="20.0" />
-            </font></Button>
-         </children></VBox>
+            </font>
+            </Button>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
    </top>
    <left>
       <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <GridPane prefHeight="666.0" prefWidth="671.0" BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
-               <children>
-                  <HBox prefHeight="60.0" prefWidth="306.0" spacing="10.0">
-                        <Spinner fx:id="spinner" max="30" min="1" />
-                        <Label text="L/100km" textFill="WHITE">
-                             <font>
-                                <Font size="14.0" />
-                             </font>
-                        </Label>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <Button mnemonicParsing="false" onAction="#jncpmcdc" prefHeight="24.0" prefWidth="306.0" text="Je ne connais pas ma consommation de carburant" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
-                     <font>
-                        <Font name="Trebuchet MS" size="13.0" />
-                     </font></Button>
-
-               </children>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
+      <VBox prefHeight="900" prefWidth="1000" spacing="20.0">
+         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+            <VBox prefHeight="150" prefWidth="400" spacing="20.0">
+               <Label text="Consommation carburant :" textFill="#d8dbe0">
+                  <font>
+                     <Font name="Trebuchet MS" size="30.0" />
+                  </font>
+               </Label>
+               <Button mnemonicParsing="false" onAction="#jncpmcdc" prefHeight="24.0" prefWidth="340.0" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Je ne connais pas ma consommation de carburant" textAlignment="CENTER" textFill="#d8dbe0">
+                  <font>
+                     <Font name="Trebuchet MS" size="14.0" />
+                  </font>
+               </Button>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
-               <children>
-                  <Label prefHeight="65.0" prefWidth="243.0" text="Consommation carburant :" textFill="WHITE">
+            <Spinner fx:id="spinner" max="30" min="1" prefHeight="40" prefWidth="80" />
+            <Label text="L/100km" textFill="#d8dbe0">
+               <font>
+                  <Font name="Trebuchet MS" size="30.0" />
+               </font>
+            </Label>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         </HBox>
+         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+            <Label text="Distance parcourue :" textFill="#d8dbe0">
+               <font>
+                  <Font name="Trebuchet MS" size="30.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="150" prefWidth="500" spacing="20.0">
+               <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="0" prefHeight="60.0" prefWidth="200.0" value="100.0" />
+               <HBox alignment="BOTTOM_LEFT" prefHeight="75" prefWidth="150" spacing="20.0">
+                  <Label fx:id="distance" textFill="#d8dbe0">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Trebuchet MS" size="50.0" />
                      </font>
                   </Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.rowIndex="1">
-               <children>
-                  <Label prefHeight="65.0" prefWidth="243.0" text="Distance parcourue :" textFill="WHITE">
+                  <Label text="km" textFill="#d8dbe0">
                      <font>
-                        <Font size="18.0" />
-                     </font></Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-            </VBox>
-            <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="1" prefHeight="58.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="100.0" />
-               <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                  <children>
-                     <Label fx:id="distance" prefHeight="40.0" prefWidth="80.0" textFill="WHITE">
-                     <font>
-                        <Font size="18.0" />
+                        <Font name="Trebuchet MS" size="30.0" />
                      </font>
                   </Label>
-                     <Label prefHeight="40.0" prefWidth="30.0" text="km" textFill="WHITE">
-                        <font>
-                           <Font size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
                   <padding>
-                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                   </padding>
                </HBox>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#convertir" prefHeight="50.0" prefWidth="251.0" text="Convertir" style="-fx-background-color:#929876; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d0d8c1">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Button>
-               </children>
                <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
             </VBox>
-            <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <Label fx:id="reponseDeplacement" prefHeight="45.0" prefWidth="162.0" textFill="WHITE">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="46.0" prefWidth="357.0" text="épinettes noires après 70 ans" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         </HBox>
+         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+            <Button mnemonicParsing="false" onAction="#convertir" prefHeight="50.0" prefWidth="251.0" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Convertir" textAlignment="CENTER" textFill="#d8dbe0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <VBox alignment="TOP_CENTER" prefHeight="300" prefWidth="500" spacing="20.0">
+               <Label fx:id="reponse" textFill="#d8dbe0">
+                  <font>
+                     <Font name="TrebuchetMS Bold" size="70.0" />
+                  </font>
+               </Label>
+               <Label text="épinettes noires après 70 ans" textFill="#d8dbe0">
+                  <font>
+                     <Font name="Trebuchet MS Bold" size="30.0" />
+                  </font>
+               </Label>
                <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
                </padding>
             </VBox>
-         </children>
-      </GridPane>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         </HBox>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
    </center>
 </BorderPane>

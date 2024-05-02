@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Credits">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #4d5652" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Credits">
 
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -13,50 +13,50 @@
    <top>
       <VBox prefHeight="119.0" prefWidth="1022.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1095.0" text="Crédits" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1095.0" text="Crédits" textFill="#cdd3d0">
                <font>
-                  <Font name="Elephant" size="24.0" />
+                  <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#383330; -fx-background-radius: 30" text="Retour" textAlignment="CENTER" textFill="#f3f3f3" />
+            <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#819089; -fx-background-radius: 30" text="Retour" textAlignment="CENTER" textFill="#cdd3d0" />
          </children>
       </VBox>
    </top>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Interface (front-end)" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Interface (front-end)" textFill="#cdd3d0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Geneviève Châtigny et Céleste-Lyi Martel" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Geneviève Châtigny et Céleste-Lyi Martel" textFill="#cdd3d0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Algorithme (back-end)" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Algorithme (back-end)" textFill="#cdd3d0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Céleste-Lyi Martel" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Céleste-Lyi Martel" textFill="#cdd3d0">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Remerciements" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Remerciements" textFill="#cdd3d0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Kim Lavoie" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Kim Lavoie" textFill="#cdd3d0">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label text="Sources" textFill="WHITE">
+            <Label text="Sources" textFill="#cdd3d0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="Bla-bla-bla" textFill="WHITE">
+            <Label text="Bla-bla-bla" textFill="#cdd3d0">
                <font>
                   <Font size="14.0" />
                </font>
