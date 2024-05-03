@@ -11,27 +11,25 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <left>
-      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true"/>
    </left>
    <top>
-      <VBox spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
+      <VBox alignment="CENTER_LEFT" spacing="10.0">
             <Label text="Consommation de carburant" textFill="#d6c3c1">
                <font>
                   <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#9e726d; -fx-background-radius: 30" textAlignment="CENTER" textFill="#d6c3c1">
+            <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#9e726d; -fx-background-radius: 30" text="Retour" textAlignment="CENTER" textFill="#d6c3c1">
                <font>
                   <Font name="Trebuchet MS" size="20.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color:#9e726d; -fx-background-radius: 30" textAlignment="CENTER" textFill="#d6c3c1">
+            <Button mnemonicParsing="false" onAction="#menu" style="-fx-background-color:#9e726d; -fx-background-radius: 30" text="Menu" textAlignment="CENTER" textFill="#d6c3c1">
                <font>
                   <Font name="Trebuchet MS" size="20.0" />
                </font>
             </Button>
-         </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
@@ -40,14 +38,14 @@
    <center>
       <VBox prefHeight="900" prefWidth="1000" spacing="20.0">
          <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
-            <Label text="Distance parcourue :" textFill="WHITE">
+            <Label text="Distance parcourue :" textFill="#d6c3c1">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
-            <VBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                  <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="200.0" max="1000" min="1" minorTickCount="1" prefHeight="32.0" prefWidth="208.0" showTickLabels="true" showTickMarks="true" value="200.0" />
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+            <VBox prefHeight="150" prefWidth="500.0" spacing="20.0">
+                  <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="1000.0" min="1.0" minorTickCount="0" prefHeight="60.0" prefWidth="200.0" value="100.0" />
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="75" prefWidth="150" spacing="20.0">
                         <Label fx:id="distance" textFill="#d6c3c1">
                            <font>
                               <Font name="Trebuchet MS" size="50.0" />
@@ -58,86 +56,62 @@
                               <Font name="Trebuchet MS" size="30.0" />
                            </font>
                         </Label>
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
                   </HBox>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
             </VBox>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         </HBox>
+         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+            <Label text="Quantité de carburant :" textFill="#d6c3c1">
+               <font>
+                  <Font name="Trebuchet MS" size="30.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="spinnerQuantCarb" max="200" min="1" prefHeight="40.0" prefWidth="80.0" />
+            <Label text="L" textFill="#d6c3c1">
+               <font>
+                  <Font name="Trebuchet MS" size="30.0" />
+               </font>
+            </Label>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         </HBox>
+         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+            <Button fx:id="trouver" mnemonicParsing="false" onAction="#trouver" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color:#9e726d; -fx-background-radius: 60" text="Trouver" textAlignment="CENTER" textFill="#d6c3c1">
+               <font>
+                  <Font name="Trebuchet MS" size="36.0" />
+               </font>
+            </Button>
+            <VBox alignment="TOP_CENTER" prefHeight="300" prefWidth="500" spacing="20.0">
+               <Label fx:id="reponseCarburant" textFill="#d6c3c1">
+                  <font>
+                     <Font name="Trebuchet MS Bold" size="70.0" />
+                  </font></Label>
+               <Label text="L/100 km" textFill="#d6c3c1">
+                  <font>
+                     <Font name="Trebuchet MS Bold" size="30.0" />
+                  </font>
+               </Label>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
          </HBox>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </VBox>
-      <GridPane BorderPane.alignment="CENTER">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" text="Distance parcourue :" textAlignment="CENTER" textFill="#d6c3c1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding></HBox>
-
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
-               <children>
-                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" text="Quantité de carburant :" textFill="#d6c3c1">
-                     <font>
-                        <Font size="18.0" />
-                     </font></Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <Spinner fx:id="spinnerQuantCarb" max="1000" min="1" prefHeight="32.0" prefWidth="208.0" />
-                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="35.0" text="L" textFill="#d6c3c1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
-               <children>
-                  <Button fx:id="trouverConsomCarb" mnemonicParsing="false" onAction="#trouverConsomCarb" prefHeight="52.0" prefWidth="260.0" text="Trouver ma consommation" style="-fx-background-color:#9e726d; -fx-background-radius: 30" textAlignment="CENTER" textFill="#d6c3c1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <Label fx:id="reponseCarburant" prefHeight="49.0" prefWidth="155.0" textFill="#d6c3c1">
-                     <font>
-                        <Font size="36.0" />
-                     </font></Label>
-                  <Label prefHeight="50.0" prefWidth="93.0" text="L/100 km" textFill="#d6c3c1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding></HBox>
-         </children>
-      </GridPane>
    </center>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

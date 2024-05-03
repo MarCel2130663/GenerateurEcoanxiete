@@ -11,57 +11,109 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <top>
-      <VBox prefHeight="119.0" prefWidth="1022.0" spacing="40.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1095.0" text="Crédits" textFill="#cdd3d0">
+      <VBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label alignment="CENTER" text="Crédits" textFill="#cdd3d0">
                <font>
                   <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
             <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#819089; -fx-background-radius: 30" text="Retour" textAlignment="CENTER" textFill="#cdd3d0" />
-         </children>
       </VBox>
    </top>
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Interface (front-end)" textFill="#cdd3d0">
+      <VBox alignment="CENTER" spacing="20.0">
+            <Label alignment="CENTER" text="Interface (front-end)" textFill="#cdd3d0">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Trebuchet MS Bold" size="18.0" />
                </font>
             </Label>
             <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Geneviève Châtigny et Céleste-Lyi Martel" textFill="#cdd3d0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Trebuchet MS" size="14.0" />
                </font>
             </Label>
             <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Algorithme (back-end)" textFill="#cdd3d0">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Trebuchet MS Bold" size="18.0" />
                </font></Label>
             <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Céleste-Lyi Martel" textFill="#cdd3d0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Trebuchet MS" size="14.0" />
                </font></Label>
             <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" text="Remerciements" textFill="#cdd3d0">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Trebuchet MS Bold" size="18.0" />
                </font></Label>
             <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Kim Lavoie" textFill="#cdd3d0">
                <font>
-                  <Font size="14.0" />
-               </font></Label>
+                  <Font name="Trebuchet MS" size="14.0" />
+               </font>
+            </Label>
             <Label text="Sources" textFill="#cdd3d0">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Trebuchet MS Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="Bla-bla-bla" textFill="#cdd3d0">
+            <Label text="Nations Unies (s. d.) L’action pour le climat en bref." textFill="#cdd3d0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Trebuchet MS" size="10.0" />
                </font>
             </Label>
-         </children>
+         <Label text="https://www.un.org/fr/climatechange/science/key-findings#physical-science" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="Association Canadienne des Producteurs Pétroliers (s. d.) Les émissions de gaz à effet de serre." textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="https://www.capp.ca/fr/explore/les-emissions-de-gaz-a-effet-de-serre/#:~:text=Les%20%C3%A9missions%20de%20gaz%20%C3%A0%20effet%20de%20serre%20(GES)%20sont,contribuent%20tous%20aux%20changements%20climatiques" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="Mayer, Nathalie (23 septembre 2022) Réduire sa vitesse en voiture permet-il vraiment de réduire la pollution?" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="https://www.futura-sciences.com/planete/questions-reponses/pollution-reduire-vitesse-voiture-permet-il-vraiment-reduire-pollution-7417/" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="Alloprof (s. d.) La relation entre la puissance et l’énergie électrique." textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="https://www.alloprof.qc.ca/fr/eleves/bv/sciences/la-relation-entre-la-puissance-et-l-energie-elec-s1169" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="Christophe (7 mars 2008) Émissions de CO2 par litre de carburant : essence, diesel ou GPL." textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="https://www.econologie.com/emissions-co2-litre-carburant-essence-diesel-ou-gpl/" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="Hydro-Québec (s. d.) Outils de calcul de la consommation." textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
+         <Label text="https://www.hydroquebec.com/residentiel/espace-clients/consommation/outils/" textFill="#cdd3d0">
+            <font>
+               <Font name="Trebuchet MS" size="10.0" />
+            </font>
+         </Label>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>

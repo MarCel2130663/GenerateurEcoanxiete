@@ -8,15 +8,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ConsomEnergie">
-
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #a46844" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ConsomEnergie">
+   <top>
+      <VBox spacing="10.0">
+         <Label alignment="CENTER_LEFT" text="Consommation d'énergie" textFill="#cd9a7c">
+            <font>
+               <Font name="Trebuchet MS Bold" size="60.0" />
+            </font>
+         </Label>
+            <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </top>
    <left>
-      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </BorderPane.margin></ImageView>
+      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true"/>
    </left>
    <center>
+
       <GridPane prefHeight="565.0" prefWidth="862.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -150,22 +160,7 @@
          </children>
       </GridPane>
    </center>
-   <right>
 
-   </right>
-   <top>
-      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="1087.0" text="Consommation d'énergie" textFill="WHITE">
-               <font>
-                  <Font name="Elephant" size="24.0" />
-               </font></Label>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" />
-         </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding></VBox>
-   </top>
    <padding>
       <Insets bottom="20.0" right="20.0" top="20.0" />
    </padding>

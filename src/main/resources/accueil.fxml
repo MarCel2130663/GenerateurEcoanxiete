@@ -9,12 +9,9 @@
    <padding>
       <Insets bottom="20.0" right="20.0" top="20.0" />
    </padding>
-   <top>
-
-   </top>
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
-         <Label alignment="CENTER" prefHeight="49.0" prefWidth="924.0" text="Générateur d'écoanxiété" textFill="#d5c1de" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" spacing="50.0">
+         <Label alignment="CENTER" text="Générateur d'écoanxiété" textFill="#d5c1de">
             <font>
                <Font name="Trebuchet MS Bold" size="60.0" />
             </font></Label>
@@ -28,7 +25,7 @@
                <Font name="Trebuchet MS" size="36.0" />
             </font></Button>
          <padding>
-            <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </VBox>
    </center>

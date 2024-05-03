@@ -40,7 +40,7 @@ public class ConsomCarburant {
         return df.format((float)(quantCarb * 100L) / nbKm);
     }
 
-    public void trouverConsomCarb(){
+    public void trouver(){
         reponseCarburant.setText(calculConsomCarb((int) slider.getValue(), spinnerQuantCarb.getValue()));
     }
 

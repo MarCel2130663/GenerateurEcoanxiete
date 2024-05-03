@@ -8,12 +8,12 @@
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Menu">
 
    <center>
-      <VBox alignment="CENTER" prefHeight="624.0" prefWidth="764.0" spacing="60.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="306.0" style="-fx-text-fill: #d0d8c1" text="Menu" textFill="WHITE" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" spacing="50.0">
+            <Label alignment="CENTER" style="-fx-text-fill: #d0d8c1" text="Menu" textFill="#d0d8c1">
                <font>
                   <Font name="Trebuchet MS Bold" size="60.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="65.0" prefWidth="400.0" style="-fx-background-color:#929876; -fx-background-radius: 60" text="Déplacement en arbres" textAlignment="CENTER" textFill="#d0d8c1">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
@@ -25,12 +25,13 @@
             <Button mnemonicParsing="false" onAction="#consomEnergie" prefHeight="65.0" prefWidth="400.0" style="-fx-background-color:#929876; -fx-background-radius: 60" text="Consommation d'énergie" textAlignment="CENTER" textFill="#d0d8c1">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#929876; -fx-background-radius: 60" text="Retour" textAlignment="CENTER" textFill="#d0d8c1">
             <font>
                <Font name="Trebuchet MS" size="20.0" />
-            </font></Button>
-         </children>
+            </font>
+            </Button>
       </VBox>
    </center>
    <padding>
