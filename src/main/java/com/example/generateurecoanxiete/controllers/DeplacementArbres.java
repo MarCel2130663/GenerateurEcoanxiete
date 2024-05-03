@@ -34,7 +34,7 @@ public class DeplacementArbres {
     }
 
     public void jncpmcdc() throws IOException {
-        HelloApplication.changerScene("/consommationCarburant.fxml");
+        HelloApplication.changerScene("/consomCarburant.fxml");
     }
 
     public int calculEmission(int consomCarburant, int distance){

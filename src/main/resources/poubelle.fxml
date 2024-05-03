@@ -8,71 +8,66 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #895b65" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Poubelle">
    <top>
-      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1022.0" text="Ma poubelle" textFill="#f2ccd4">
-               <font>
-                  <Font name="Elephant" size="24.0" />
-               </font></Label>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color:#cf8fa1; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
-               <font>
-                  <Font name="Trebuchet MS" size="20"/>
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#cf8fa1; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
-               <font>
-                  <Font name="Trebuchet MS" size="20"/>
-               </font>
-            </Button>
-         </children>
+      <VBox alignment="CENTER_LEFT" spacing="10.0">
+         <Label text="Ma poubelle" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS Bold" size="60.0"/>
+            </font>
+         </Label>
+         <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color:#cf8fa1; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS" size="20"/>
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#retour" text="Retour" style="-fx-background-color:#cf8fa1; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS" size="20"/>
+            </font>
+         </Button>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding></VBox>
-   </top>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-
-   <center>
-      <ScrollPane fx:id="scrollPoubelle" prefHeight="574.0" prefWidth="533.0" BorderPane.alignment="CENTER" style="-fx-background: #cf8fa1">
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
          </padding>
-         <content>
-            <VBox fx:id="vBox" prefHeight="524.0" prefWidth="549.0" />
-         </content></ScrollPane>
-   </center>
-   <right>
-      <VBox prefHeight="574.0" prefWidth="593.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="nomDechet" prefHeight="212.0" prefWidth="394.0" textFill="#f2ccd4">
-               <font>
-                  <Font name="Elephant" size="24.0" />
-               </font></Label>
-            <ImageView fx:id="imageView" fitHeight="409.0" fitWidth="466.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="tempsDesint" prefHeight="47.0" prefWidth="394.0" textFill="#f2ccd4">
-               <font>
-                  <Font name="Elephant" size="24.0" />
-               </font></Label>
-         </children>
+      </VBox>
+   </top>
+   <left>
+      <ScrollPane fx:id="scrollPoubelle" prefHeight="500.0" prefWidth="530.0" style="-fx-background: #cf8fa1">
+         <VBox fx:id="vBox" prefHeight="500.0" prefWidth="530.0" spacing="10"/>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+         </padding>
+      </ScrollPane>
+   </left>
+   <right>
+      <VBox prefHeight="575.0" prefWidth="590.0" spacing="20.0">
+         <Label fx:id="nomDechet" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS Bold" size="30.0"/>
+            </font>
+         </Label>
+         <ImageView fx:id="imageView" fitHeight="350.0" fitWidth="300.0"/>
+         <padding>
+            <Insets left="20.0" right="20.0"/>
          </padding>
       </VBox>
    </right>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4"/>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voirGraphique" text="Voir mon graphique" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-         </children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="20.0">
+         <Button mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS" size="30.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#voirGraphique" text="Voir mon graphique" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
+            <font>
+               <Font name="Trebuchet MS" size="30.0" />
+            </font>
+         </Button>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </HBox>
    </bottom>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </BorderPane>

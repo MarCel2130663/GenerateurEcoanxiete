@@ -9,6 +9,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -57,12 +58,12 @@ public class Poubelle {
             if(vBox != null){
                 vBox.getChildren().add(bouton);
                 bouton.setPrefSize(300, 50);
-                bouton.setStyle("-fx-font-size:18");
+                bouton.setStyle("-fx-font-size:20; -fx-background-color: #f2ccd4; -fx-text-fill: #895b65; -fx-background-radius: 60");
+                bouton.setFont(Font.font("Trebuchet MS"));
             }
             bouton.setOnAction(e -> {
-                nomDechet.setText(dechet.getNom());
+                nomDechet.setText(dechet.getNom() + " ~ " + dechet.getTempsDesintegration());
                 imageView.setImage(new Image(dechet.getImage().getUrl(), 1000, 1000, false, false));
-                tempsDesint.setText(dechet.getTempsDesintegration());
             });
         }
     }

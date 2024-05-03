@@ -8,219 +8,222 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #735b46 " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ListeDechets">
    <top>
-      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Liste de déchets" style="-fx-text-fill: #d2c1b2">
+      <VBox prefHeight="105.0" prefWidth="1062.0" spacing="10.0">
+            <Label text="Liste de déchets" textFill="#d2c1b2">
                <font>
-                  <Font name="Elephant" size="60.0" />
+                  <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2"/>
-         </children>
+         <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
+            <font>
+               <Font name="Trebuchet MS" size="20"/>
+            </font>
+         </Button>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </VBox>
    </top>
+   <left>
+   <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true"/>
+   </left>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <center>
-      <ScrollPane prefHeight="553.0" prefWidth="657.0" BorderPane.alignment="CENTER" style="-fx-background: #a48264">
-         <content>
-            <VBox prefHeight="623.0" prefWidth="788.0">
-               <children>
-                  <CheckBox fx:id="aluminium" mnemonicParsing="false" text="Boite en aluminium" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="ampoule" mnemonicParsing="false" text="Ampoule" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="conserve" mnemonicParsing="false" text="Boite de conserve" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="bouteillePlastique" mnemonicParsing="false" text="Bouteille en plastique" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="briquet" mnemonicParsing="false" text="Briquet en plastique" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="canette" mnemonicParsing="false" text="Canette" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="carton" mnemonicParsing="false" text="Carton" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="chewingGum" mnemonicParsing="false" text="Chewing-gum" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="cigarette" mnemonicParsing="false" text="Mégot de cigarette" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="couche" mnemonicParsing="false" text="Couche jetable" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="journal" mnemonicParsing="false" text="Papier journal" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="lait" mnemonicParsing="false" text="Brique de lait" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="masque" mnemonicParsing="false" text="Masque chirurgical" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="mouchoir" mnemonicParsing="false" text="Mouchoir ou serviette en papier" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="papierBonbon" mnemonicParsing="false" text="Papier de bonbon" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="pile" mnemonicParsing="false" text="Pile" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="pneu" mnemonicParsing="false" text="Pneu" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="polystyrene" mnemonicParsing="false" text="Récipient en polystyrène" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="sacPlastique" mnemonicParsing="false" text="Sac en plastique" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="servietteTampon" mnemonicParsing="false" text="Tampon ou serviette hygiènique" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding></CheckBox>
-                  <CheckBox fx:id="verre" mnemonicParsing="false" text="Verre" textFill="#735b46">
-                     <font>
-                        <Font name="Trebuchet MS" size="20"/>
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </CheckBox>
-               </children></VBox>
-         </content>
+      <ScrollPane prefHeight="550.0" prefWidth="650.0" style="-fx-background: #a48264">
+         <VBox prefHeight="550.0" prefWidth="650.0">
+            <CheckBox fx:id="aluminium" mnemonicParsing="false" text="Boite en aluminium" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="ampoule" mnemonicParsing="false" text="Ampoule" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="conserve" mnemonicParsing="false" text="Boite de conserve" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="bouteillePlastique" mnemonicParsing="false" text="Bouteille en plastique" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="briquet" mnemonicParsing="false" text="Briquet en plastique" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="canette" mnemonicParsing="false" text="Canette" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="carton" mnemonicParsing="false" text="Carton" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="chewingGum" mnemonicParsing="false" text="Chewing-gum" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="cigarette" mnemonicParsing="false" text="Mégot de cigarette" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="couche" mnemonicParsing="false" text="Couche jetable" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="journal" mnemonicParsing="false" text="Papier journal" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="lait" mnemonicParsing="false" text="Brique de lait" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="masque" mnemonicParsing="false" text="Masque chirurgical" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="mouchoir" mnemonicParsing="false" text="Mouchoir ou serviette en papier"
+                      textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="papierBonbon" mnemonicParsing="false" text="Papier de bonbon" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="pile" mnemonicParsing="false" text="Pile" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="pneu" mnemonicParsing="false" text="Pneu" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="polystyrene" mnemonicParsing="false" text="Récipient en polystyrène" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="sacPlastique" mnemonicParsing="false" text="Sac en plastique" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="servietteTampon" mnemonicParsing="false" text="Tampon ou serviette hygiènique"
+                      textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="verre" mnemonicParsing="false" text="Verre" textFill="#735b46">
+               <font>
+                  <Font name="Trebuchet MS" size="20"/>
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+            </CheckBox>
+         </VBox>
       </ScrollPane>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" onAction="#ajouterPoubelle" text="Ajouter à ma poubelle" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#allerPoubelle" text="Aller à ma poubelle" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-         </children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="20.0">
+         <Button mnemonicParsing="false" onAction="#ajouterPoubelle" text="Ajouter à ma poubelle" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
+            <font>
+               <Font name="Trebuchet MS" size="30.0"/>
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#allerPoubelle" text="Aller à ma poubelle" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
+            <font>
+               <Font name="Trebuchet MS" size="30.0"/>
+            </font>
+         </Button>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
          </padding>
       </HBox>
    </bottom>
-   <left>
-      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-   </left>
-
-
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </BorderPane>

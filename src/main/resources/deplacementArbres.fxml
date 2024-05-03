@@ -12,7 +12,7 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <top>
-      <VBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER_LEFT" spacing="10.0">
             <Label text="Déplacement en arbres" textFill="#d8dbe0">
                <font>
                   <Font name="Trebuchet MS Bold" size="60.0" />
@@ -29,7 +29,7 @@
       </VBox>
    </top>
    <left>
-      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true"/>
+      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
    </left>
    <center>
       <VBox prefHeight="900" prefWidth="1000" spacing="20.0">
@@ -76,11 +76,11 @@
                      </font>
                   </Label>
                   <padding>
-                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     <Insets left="20.0" right="20.0" top="20.0" />
                   </padding>
                </HBox>
                <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  <Insets left="20.0" right="20.0" top="20.0" />
                </padding>
             </VBox>
             <padding>
@@ -88,7 +88,7 @@
             </padding>
          </HBox>
          <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
-            <Button mnemonicParsing="false" onAction="#convertir" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Convertir" textAlignment="CENTER" textFill="#d8dbe0">
+            <Button mnemonicParsing="false" onAction="#convertir" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Convertir" textAlignment="CENTER" textFill="#d8dbe0">
                <font>
                   <Font name="Trebuchet MS" size="36.0" />
                </font>
