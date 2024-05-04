@@ -18,7 +18,7 @@
                   <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#menu" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Menu" textAlignment="CENTER" textFill="#d8dbe0">
+            <Button mnemonicParsing="false" onAction="#menu" prefHeight="40" prefWidth="90" style="-fx-background-color:#778193; -fx-background-radius: 60" text="Menu" textAlignment="CENTER" textFill="#d8dbe0">
             <font>
                <Font name="Trebuchet MS" size="20.0" />
             </font>

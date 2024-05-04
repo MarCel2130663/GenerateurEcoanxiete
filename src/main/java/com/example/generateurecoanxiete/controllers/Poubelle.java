@@ -32,7 +32,7 @@ public class Poubelle {
     @FXML
     ImageView imageView;
     @FXML
-    Label tempsDesint;
+    StackPane stackPane;
     List<Dechet> maPoubelle = new ArrayList<>();
     List<String> poubelleUtilisateur;
     {
@@ -57,13 +57,15 @@ public class Poubelle {
             Button bouton = new Button(dechet.getNom());
             if(vBox != null){
                 vBox.getChildren().add(bouton);
-                bouton.setPrefSize(300, 50);
+                bouton.setPrefSize(390, 50);
                 bouton.setStyle("-fx-font-size:20; -fx-background-color: #f2ccd4; -fx-text-fill: #895b65; -fx-background-radius: 60");
                 bouton.setFont(Font.font("Trebuchet MS"));
             }
             bouton.setOnAction(e -> {
+                stackPane.getChildren().clear();
                 nomDechet.setText(dechet.getNom() + " ~ " + dechet.getTempsDesintegration());
                 imageView.setImage(new Image(dechet.getImage().getUrl(), 1000, 1000, false, false));
+                stackPane.getChildren().add(imageView);
             });
         }
     }

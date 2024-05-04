@@ -88,8 +88,6 @@ public class ListeDechets {
             if (!allLine.isEmpty()) {
                 listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
             }
-            else
-                System.out.println("La liste de déchets prédéfinis est vide.");
         }
         listeCheckBoxes.add(aluminium);
         listeCheckBoxes.add(ampoule);

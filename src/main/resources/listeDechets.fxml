@@ -14,7 +14,7 @@
                   <Font name="Trebuchet MS Bold" size="60.0" />
                </font>
             </Label>
-         <Button mnemonicParsing="false" onAction="#menu" text="Menu" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
+         <Button mnemonicParsing="false" onAction="#menu" prefHeight="40" prefWidth="90" text="Menu" style="-fx-background-color: #a48264; -fx-background-radius: 60" textAlignment="CENTER" textFill="#d2c1b2">
             <font>
                <Font name="Trebuchet MS" size="20"/>
             </font>
@@ -186,7 +186,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
                </padding>
             </CheckBox>
-            <CheckBox fx:id="servietteTampon" mnemonicParsing="false" text="Tampon ou serviette hygiènique"
+            <CheckBox fx:id="servietteTampon" mnemonicParsing="false" text="Tampon ou serviette hygiénique"
                       textFill="#735b46">
                <font>
                   <Font name="Trebuchet MS" size="20"/>

@@ -27,7 +27,7 @@
                   <Font name="Trebuchet MS" size="28.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#retour" style="-fx-background-color:#929876; -fx-background-radius: 60" text="Retour" textAlignment="CENTER" textFill="#d0d8c1">
+            <Button mnemonicParsing="false" onAction="#retour" prefHeight="40" prefWidth="90" style="-fx-background-color:#929876; -fx-background-radius: 60" text="Retour" textAlignment="CENTER" textFill="#d0d8c1">
             <font>
                <Font name="Trebuchet MS" size="20.0" />
             </font>

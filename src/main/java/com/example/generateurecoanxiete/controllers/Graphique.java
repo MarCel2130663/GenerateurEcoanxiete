@@ -58,17 +58,12 @@ public class Graphique {
             if (!dechet.isEmpty()) {
                 maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.parse(infos[3])));
             }
-            else
-                System.out.println("La poubelle est vide.");
         }
 
         for(Dechet dechet1 : maPoubelle){
             if(dechet1.getDate().equals(LocalDate.now())){
                 Label label = new Label(dechet1.getNom());
-                label.setScaleX(1.3);
-                label.setScaleY(1.3);
-                label.setTextAlignment(TextAlignment.LEFT);
-                //aligner texte
+                label.setStyle("-fx-font-size:20; -fx-text-fill: #d0c498");
                 if(dechetsAujourdhui != null) {
                     dechetsAujourdhui.getChildren().add(label);
                 }
