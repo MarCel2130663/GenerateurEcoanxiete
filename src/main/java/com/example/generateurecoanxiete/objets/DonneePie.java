@@ -1,7 +1,5 @@
 package com.example.generateurecoanxiete.objets;
 
-import java.time.LocalDate;
-
 public class DonneePie {
 
     private String nom;

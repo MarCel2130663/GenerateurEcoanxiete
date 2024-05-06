@@ -4,7 +4,6 @@ import com.example.generateurecoanxiete.HelloApplication;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.converter.NumberStringConverter;

@@ -12,7 +12,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
-import javafx.scene.text.TextAlignment;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -125,7 +124,6 @@ public class Graphique {
         Stack<DonneeBar> stack = new Stack<>();
         stack.addAll(donneesBar);
         Stack<DonneeBar> stack2 = new Stack<>();
-        List<XYChart.Data> listeFinale = new ArrayList<>();
         XYChart.Series serie = new XYChart.Series();
         int j = 0;
 
