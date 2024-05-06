@@ -59,7 +59,7 @@
    </right>
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="20.0">
-         <Button mnemonicParsing="false" onAction="#viderPoubelle" text="Effacer ma poubelle" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
+         <Button mnemonicParsing="false" onAction="#viderPoubelle" text="Vider ma poubelle" style="-fx-background-color:#e598a9; -fx-background-radius: 60" textAlignment="CENTER" textFill="#f2ccd4">
             <font>
                <Font name="Trebuchet MS" size="30.0" />
             </font>

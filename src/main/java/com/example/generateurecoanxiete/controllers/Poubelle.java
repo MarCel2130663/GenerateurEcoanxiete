@@ -3,9 +3,7 @@ package com.example.generateurecoanxiete.controllers;
 import com.example.generateurecoanxiete.objets.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -80,10 +78,17 @@ public class Poubelle {
 
     public void viderPoubelle() throws IOException {
         //pop un avertissement
-        vBox.getChildren().clear();
-        poubelleUtilisateur.clear();
-        FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", false);
-        fw.write("");
+        Alert alerte = new Alert(Alert.AlertType.CONFIRMATION);
+        alerte.setTitle("Attention!");
+        alerte.setHeaderText("Si vous videz votre poubelle, les données seront supprimées définitevement.");
+        alerte.setContentText("Il vous sera impossible de les récupérer. Êtes-vous certain(e) de vouloir tout effacer?");
+        ButtonType resultat = alerte.showAndWait().get();
+        if(resultat == ButtonType.OK){
+            vBox.getChildren().clear();
+            poubelleUtilisateur.clear();
+            FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", false);
+            fw.write("");
+        }
     }
 
     public void menu() throws IOException {
