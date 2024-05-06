@@ -32,7 +32,7 @@ public class ConsomCarburant {
 
     @FXML
     public void initialize(){
-        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 22)]);
         Bindings.bindBidirectional(distance.textProperty(), slider.valueProperty(), new NumberStringConverter());
     }
 

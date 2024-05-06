@@ -81,7 +81,7 @@ public class ListeDechets {
 
     public void initialize(){
 
-        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 22)]);
 
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
@@ -114,6 +114,7 @@ public class ListeDechets {
 
     public void ajouterPoubelle() throws IOException {
         FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", true);
+        poubelle.clear();
         listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
             for(Dechet dechet : listeBase){
                 if(dechet.getNom().equals(e.getText())){

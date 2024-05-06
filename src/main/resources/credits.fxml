@@ -59,6 +59,11 @@
                   <Font name="Trebuchet MS" size="14.0" />
                </font>
             </Label>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="386.0" text="Saskia Schnéegans" textFill="#cdd3d0">
+               <font>
+                  <Font name="Trebuchet MS" size="14.0" />
+               </font>
+            </Label>
          </VBox>
          <VBox alignment="CENTER" spacing="5">
             <Label text="Sources" textFill="#cdd3d0">

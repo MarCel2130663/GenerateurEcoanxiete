@@ -10,10 +10,10 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
 
-    public static Image[] images = {new Image("file:1.jpg"), new Image("file:2.jpg"), new Image("file:3.jpg"), new Image("file:4.jpg"), new Image("file:5.jpg"), new Image("file:6.jpg"),
-        new Image("file:7.jpg"), new Image("file:8.jpg"), new Image("file:9.jpg"), new Image("file:10.jpg"), new Image("file:11.jpg"), new Image("file:12.jpg"), new Image("file:13.jpg"),
-        new Image("file:14.jpg"), new Image("file:15.jpg"), new Image("file:16.jpg"), new Image("file:1.jpg"), new Image("file:17.jpg"), new Image("file:18.jpg"), new Image("file:19.jpg"),
-        new Image("file:20.jpg"), new Image("file:21.jpg"), new Image("file:22.jpg"), new Image("file:23.jpg"), new Image("file:24.jpg"), new Image("file:25.jpg"), new Image("file:26.jpg")};
+    public static Image[] images = {new Image("file:1.png"), new Image("file:2.png"), new Image("file:3.png"), new Image("file:4.png"), new Image("file:5.png"), new Image("file:6.png"),
+        new Image("file:7.png"), new Image("file:8.png"), new Image("file:9.png"), new Image("file:10.png"), new Image("file:11.png"), new Image("file:12.png"), new Image("file:13.png"),
+        new Image("file:14.png"), new Image("file:15.png"), new Image("file:16.png"), new Image("file:1.png"), new Image("file:17.png"), new Image("file:18.png"), new Image("file:19.png"),
+        new Image("file:20.png"), new Image("file:21.png"), new Image("file:22.png"), new Image("file:23.png")};
     private static Stage stage;
     public static void changerScene(String nouvelleScene) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource(nouvelleScene));
@@ -26,7 +26,7 @@ public class HelloApplication extends Application {
 
         HelloApplication.stage = stage;
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/graphique.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/accueil.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1500, 800);
             stage.setTitle("Générateur d'écoanxiété");
             stage.setScene(scene);

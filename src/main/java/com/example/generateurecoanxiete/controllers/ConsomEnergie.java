@@ -36,7 +36,7 @@ public class ConsomEnergie {
     @FXML
     public void initialize(){
         Bindings.bindBidirectional(puissance.textProperty(), slider.valueProperty(), new NumberStringConverter());
-        imageView.setImage(HelloApplication.images[(int) (Math.random() * 25)]);
+        imageView.setImage(HelloApplication.images[(int) (Math.random() * 22)]);
     }
 
     public double heureMinSecEnSec(int heure, int minute, int seconde){

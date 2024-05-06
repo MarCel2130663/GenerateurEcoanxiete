@@ -6,7 +6,6 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #66664c" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.Menu">
-
    <center>
       <VBox alignment="CENTER" spacing="50.0">
             <Label alignment="CENTER" style="-fx-text-fill: #d0d8c1" text="Menu" textFill="#d0d8c1">

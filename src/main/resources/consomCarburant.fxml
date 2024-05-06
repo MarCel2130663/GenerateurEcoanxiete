@@ -40,7 +40,6 @@
    <left>
       <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
    </left>
-
    <center>
       <VBox prefHeight="900" prefWidth="1000" spacing="20.0">
          <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
@@ -50,31 +49,31 @@
                </font>
             </Label>
             <VBox prefHeight="150" prefWidth="500.0" spacing="20.0">
-                  <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="1000.0" min="1.0" minorTickCount="0" prefHeight="60.0" prefWidth="200.0" value="100.0" />
-                  <HBox alignment="BOTTOM_LEFT" prefHeight="75" prefWidth="150" spacing="20.0">
-                        <Label fx:id="distance" textFill="#d6c3c1">
-                           <font>
-                              <Font name="Trebuchet MS" size="50.0" />
-                           </font>
-                        </Label>
-                        <Label text="km" textFill="#d6c3c1">
-                           <font>
-                              <Font name="Trebuchet MS" size="30.0" />
-                           </font>
-                        </Label>
+               <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="1000.0" min="1.0" minorTickCount="0" prefHeight="40.0" prefWidth="200.0" value="100.0" />
+               <HBox alignment="BOTTOM_LEFT" prefHeight="75" prefWidth="150" spacing="20.0">
+                  <Label fx:id="distance" textFill="#d6c3c1">
+                     <font>
+                        <Font name="Trebuchet MS" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label text="km" textFill="#d6c3c1">
+                     <font>
+                        <Font name="Trebuchet MS" size="30.0" />
+                     </font>
+                  </Label>
                   <padding>
-                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     <Insets left="20.0" right="20.0" top="20.0" />
                   </padding>
-                  </HBox>
+               </HBox>
                <padding>
-                  <Insets left="20.0" right="20.0" top="20.0" />
+                  <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
             <padding>
                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </padding>
          </HBox>
-         <HBox prefHeight="300" prefWidth="1000" spacing="20.0">
+         <HBox prefHeight="200" prefWidth="1000" spacing="20.0">
             <Label text="Quantité de carburant :" textFill="#d6c3c1">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />

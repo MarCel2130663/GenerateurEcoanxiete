@@ -3,11 +3,11 @@ package com.example.generateurecoanxiete.controllers;
 import com.example.generateurecoanxiete.objets.Dechet;
 import com.example.generateurecoanxiete.HelloApplication;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.text.Font;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -56,8 +56,7 @@ public class Poubelle {
             if(vBox != null){
                 vBox.getChildren().add(bouton);
                 bouton.setPrefSize(390, 50);
-                bouton.setStyle("-fx-font-size:20; -fx-background-color: #f2ccd4; -fx-text-fill: #895b65; -fx-background-radius: 60");
-                bouton.setFont(Font.font("Trebuchet MS"));
+                bouton.setStyle("-fx-font-size:20; -fx-background-color: #f2ccd4; -fx-text-fill: #895b65; -fx-font-family: 'Trebuchet MS'; -fx-background-radius: 60");
             }
             bouton.setOnAction(e -> {
                 stackPane.getChildren().clear();
@@ -77,13 +76,24 @@ public class Poubelle {
     }
 
     public void viderPoubelle() throws IOException {
-        //pop un avertissement
+        Label header = new Label("Si vous videz votre poubelle, les données seront supprimées définitivement.\nIl vous sera alors impossible de les récupérer.");
+        Label content = new Label("Êtes-vous certain(e) de vouloir tout effacer?");
+        DialogPane dialogPane = new DialogPane();
+        dialogPane.setStyle("-fx-background: #895b65");
+        dialogPane.setPadding(new Insets(20));
+        dialogPane.setHeader(header);
+        dialogPane.setContent(content);
+        dialogPane.getHeader().setStyle("-fx-text-fill: #f2ccd4; -fx-font-size: 20; -fx-font-family: 'Trebuchet MS'");
+        dialogPane.getContent().setStyle("-fx-text-fill: #f2ccd4; -fx-font-size: 14; -fx-font-family: 'Trebuchet MS'");
+        dialogPane.getButtonTypes().add(ButtonType.YES);
+        dialogPane.getButtonTypes().add(ButtonType.CANCEL);
+        dialogPane.lookupButton(ButtonType.YES).setStyle("-fx-font-size:20; -fx-background-color: #cf8fa1; -fx-text-fill: #f2ccd4; -fx-font-family: 'Trebuchet MS'; -fx-background-radius: 60");
+        dialogPane.lookupButton(ButtonType.CANCEL).setStyle("-fx-font-size: 20; -fx-background-color: #cf8fa1; -fx-text-fill: #f2ccd4; -fx-font-family: 'Trebuchet MS'; -fx-background-radius: 60");
         Alert alerte = new Alert(Alert.AlertType.CONFIRMATION);
         alerte.setTitle("Attention!");
-        alerte.setHeaderText("Si vous videz votre poubelle, les données seront supprimées définitevement.");
-        alerte.setContentText("Il vous sera impossible de les récupérer. Êtes-vous certain(e) de vouloir tout effacer?");
+        alerte.setDialogPane(dialogPane);
         ButtonType resultat = alerte.showAndWait().get();
-        if(resultat == ButtonType.OK){
+        if(resultat == ButtonType.YES){
             vBox.getChildren().clear();
             poubelleUtilisateur.clear();
             FileWriter fw = new FileWriter("PoubelleUtilisateur.csv", false);

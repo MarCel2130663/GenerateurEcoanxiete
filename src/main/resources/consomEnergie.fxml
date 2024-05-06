@@ -11,12 +11,12 @@
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1062.0" style="-fx-background-color: #a46844" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generateurecoanxiete.controllers.ConsomEnergie">
    <top>
       <VBox alignment="CENTER_LEFT" spacing="10.0">
-         <Label text="Consommation d'énergie" textFill="#cfab97">
+         <Label text="Consommation d'énergie" textFill="#f5d7c6">
             <font>
                <Font name="Trebuchet MS Bold" size="60.0" />
             </font>
          </Label>
-            <Button mnemonicParsing="false" onAction="#menu" prefHeight="40" prefWidth="90" style="-fx-background-color:#c57e50; -fx-background-radius: 30" text="Menu" textAlignment="CENTER" textFill="#cfab97">
+            <Button mnemonicParsing="false" onAction="#menu" prefHeight="40" prefWidth="90" style="-fx-background-color:#c57e50; -fx-background-radius: 30" text="Menu" textAlignment="CENTER" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="20.0" />
                </font>
@@ -32,56 +32,56 @@
    <center>
       <VBox prefHeight="1000" prefWidth="1000" spacing="20.0">
          <HBox prefHeight="250" prefWidth="1000" spacing="20.0">
-            <Label text="Puissance de l'appareil :" textFill="#cfab97">
+            <Label text="Puissance de l'appareil :" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
             <VBox prefHeight="250" prefWidth="500" spacing="20">
-                  <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="2000.0" min="1.0" minorTickCount="0" prefHeight="60.0" prefWidth="200.0" value="1000.0" />
+                  <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="2000.0" min="1.0" minorTickCount="0" prefHeight="40.0" prefWidth="200.0" value="1000.0" />
                <HBox alignment="BOTTOM_LEFT" prefHeight="125" prefWidth="500" spacing="20">
-                  <Label fx:id="puissance" textFill="#cfab97">
+                  <Label fx:id="puissance" textFill="#f5d7c6">
                      <font>
                         <Font name="Trebuchet MS" size="50.0" />
                      </font>
                   </Label>
-                  <Label text="W" textFill="#cfab97">
+                  <Label text="W" textFill="#f5d7c6">
                      <font>
                         <Font name="Trebuchet MS" size="30.0" />
                      </font>
                   </Label>
                   <padding>
-                     <Insets bottom="20.0" right="20.0" top="20.0" />
+                     <Insets right="20.0" top="20.0" />
                   </padding>
                </HBox>
                <padding>
-                  <Insets top="20" left="20.0" right="20.0" />
+                  <Insets left="20.0" right="20.0" top="10.0" />
                </padding>
             </VBox>
             <padding>
-               <Insets bottom="20.0" left="20" right="20.0" top="20.0" />
+               <Insets left="20.0" right="20.0" top="20.0" />
             </padding>
          </HBox>
          <HBox prefHeight="250" prefWidth="1000" spacing="20.0">
-            <Label text="Temps :" textFill="#cfab97">
+            <Label text="Temps :" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
             <Spinner fx:id="spinnerH" editable="true" max="24" min="0" prefHeight="40.0" prefWidth="80.0" />
-            <Label text="h" textFill="#cfab97">
+            <Label text="h" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
             <Spinner fx:id="spinnerMin" max="59" min="0" prefHeight="40.0" prefWidth="80.0" />
-            <Label text="min" textFill="#cfab97">
+            <Label text="min" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
             <Spinner fx:id="spinnerSec" max="59" min="0" prefHeight="40.0" prefWidth="80.0" />
-            <Label text="sec" textFill="#cfab97">
+            <Label text="sec" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
@@ -91,7 +91,7 @@
             </padding>
          </HBox>
          <HBox prefHeight="250" prefWidth="1000" spacing="20.0">
-            <Label text="Fréquence :" textFill="#cfab97">
+            <Label text="Fréquence :" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
@@ -117,23 +117,23 @@
             </padding>
          </HBox>
          <HBox prefHeight="250" prefWidth="1000" spacing="20.0">
-            <Button mnemonicParsing="false" onAction="#convertir" style="-fx-background-color:#c57e50; -fx-background-radius: 60" text="Convertir" textAlignment="CENTER" textFill="#cfab97">
+            <Button mnemonicParsing="false" onAction="#convertir" style="-fx-background-color:#c57e50; -fx-background-radius: 60" text="Convertir" textAlignment="CENTER" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="36.0" />
                </font>
             </Button>
             <VBox alignment="TOP_CENTER" prefHeight="250">
-               <Label text="Temps durant lequel une ampoule restera allumée pour" textFill="#cfab97">
+               <Label text="Temps durant lequel une ampoule restera allumée pour" textFill="#f5d7c6">
                   <font>
                      <Font name="Trebuchet MS" size="15.0" />
                   </font>
                </Label>
-               <Label text="équivaloir à l'énergie consommée par l'appareil après un an :" textFill="#cfab97">
+               <Label text="équivaloir à l'énergie consommée par l'appareil après un an :" textFill="#f5d7c6">
                   <font>
                      <Font name="Trebuchet MS" size="15.0" />
                   </font>
                </Label>
-               <Label fx:id="reponse" textFill="#cfab97">
+               <Label fx:id="reponse" textFill="#f5d7c6">
                   <font>
                      <Font name="Trebuchet MS Bold" size="50.0" />
                   </font>
@@ -147,7 +147,7 @@
             </padding>
          </HBox>
          <padding>
-         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         <Insets bottom="20.0" left="20.0" right="20.0" />
          </padding>
       </VBox>
    </center>

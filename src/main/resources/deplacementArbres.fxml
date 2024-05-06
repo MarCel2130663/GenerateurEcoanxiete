@@ -63,7 +63,7 @@
                </font>
             </Label>
             <VBox prefHeight="150" prefWidth="500" spacing="20.0">
-               <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="0" prefHeight="60.0" prefWidth="200.0" value="100.0" />
+               <Slider fx:id="slider" blockIncrement="1.0" cache="true" majorTickUnit="200.0" max="3000.0" min="1.0" minorTickCount="0" prefHeight="40.0" prefWidth="200.0" value="100.0" />
                <HBox alignment="BOTTOM_LEFT" prefHeight="75" prefWidth="150" spacing="20.0">
                   <Label fx:id="distance" textFill="#d8dbe0">
                      <font>
@@ -80,7 +80,7 @@
                   </padding>
                </HBox>
                <padding>
-                  <Insets left="20.0" right="20.0" top="20.0" />
+                  <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
             <padding>
@@ -113,7 +113,7 @@
             </padding>
          </HBox>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" />
          </padding>
       </VBox>
    </center>
