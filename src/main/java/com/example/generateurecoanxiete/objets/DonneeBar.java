@@ -5,23 +5,23 @@ import java.time.LocalDate;
 public class DonneeBar {
 
     private LocalDate date;
-    private int nombre;
+    private float masse;
 
-    public DonneeBar(LocalDate date, int nombre){
+    public DonneeBar(LocalDate date, int masse){
         this.date = date;
-        this.nombre = nombre;
+        this.masse = masse;
     }
 
     public LocalDate getDate(){
         return date;
     }
 
-    public int getNombre(){
-        return nombre;
+    public float getMasse(){
+        return masse;
     }
 
-    public void setNombre(int i){
-        nombre = i;
+    public void setMasse(float i){
+        masse = i;
     }
 
 }

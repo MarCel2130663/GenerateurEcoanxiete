@@ -8,12 +8,14 @@ public class Dechet {
 
     String nom;
     String tempsDesintegration;
+    float masse;
     Image image;
     LocalDate date;
 
-    public Dechet(String nom, String tempsDesintegration, Image image, LocalDate date){
+    public Dechet(String nom, String tempsDesintegration, float masse, Image image, LocalDate date){
         this.nom = nom;
         this.tempsDesintegration = tempsDesintegration;
+        this.masse = masse;
         this.image = image;
         this.date = date;
     }
@@ -24,6 +26,9 @@ public class Dechet {
 
     public String getTempsDesintegration(){
         return tempsDesintegration;
+    }
+    public float getMasse(){
+        return masse;
     }
 
     public Image getImage(){

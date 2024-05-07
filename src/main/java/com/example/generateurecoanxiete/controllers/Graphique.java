@@ -55,7 +55,7 @@ public class Graphique {
         for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");
             if (!dechet.isEmpty()) {
-                maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.parse(infos[3])));
+                maPoubelle.add(new Dechet(infos[0], infos[1], Float.parseFloat(infos[2]), new Image(infos[3]), LocalDate.parse(infos[4])));
             }
         }
 
@@ -79,7 +79,7 @@ public class Graphique {
             //boucle sur les dechetgraphs
             for (DonneeBar donnee1 : donneesBar) {
                 if (donnee1.getDate().equals(dechet2.getDate())) {
-                    donnee1.setNombre(donnee1.getNombre() + 1);
+                    donnee1.setMasse(donnee1.getMasse() + dechet2.getMasse());
                     estTrouve = true;
                 }
 
@@ -168,7 +168,7 @@ public class Graphique {
         for(int i = 0; i < j; i++){
             if(!stack2.isEmpty()){
                 DonneeBar c = stack2.pop();
-                serie.getData().addAll(new XYChart.Data(String.valueOf(c.getDate()), c.getNombre()));
+                serie.getData().addAll(new XYChart.Data(String.valueOf(c.getDate()), c.getMasse()));
             }
         }
         barChart.getData().addAll(serie);

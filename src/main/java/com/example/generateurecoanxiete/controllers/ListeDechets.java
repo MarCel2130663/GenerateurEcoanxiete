@@ -86,7 +86,7 @@ public class ListeDechets {
         for (String allLine : allLines) {
             String[] infos = allLine.split(", ");
             if (!allLine.isEmpty()) {
-                listeBase.add(new Dechet(infos[0], infos[1], new Image(infos[2]), null));
+                listeBase.add(new Dechet(infos[0], infos[1], Float.parseFloat(infos[2]), new Image(infos[3]), null));
             }
         }
         listeCheckBoxes.add(aluminium);
@@ -118,7 +118,7 @@ public class ListeDechets {
         listeCheckBoxes.stream().filter(CheckBox::isSelected).forEach(e -> {
             for(Dechet dechet : listeBase){
                 if(dechet.getNom().equals(e.getText())){
-                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getImage(), LocalDate.now()));
+                    poubelle.add(new Dechet(dechet.getNom(), dechet.getTempsDesintegration(), dechet.getMasse(), dechet.getImage(), LocalDate.now()));
                 }
             }
         });

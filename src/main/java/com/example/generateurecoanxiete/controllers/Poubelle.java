@@ -46,7 +46,7 @@ public class Poubelle {
         for (String dechet : poubelleUtilisateur) {
             String[] infos = dechet.split(", ");
             if (!dechet.isEmpty()) {
-                maPoubelle.add(new Dechet(infos[0], infos[1], new Image(infos[2]), LocalDate.now()));
+                maPoubelle.add(new Dechet(infos[0], infos[1], Float.parseFloat(infos[2]), new Image(infos[3]), LocalDate.now()));
             }
             else
                 System.out.println("La poubelle est vide.");

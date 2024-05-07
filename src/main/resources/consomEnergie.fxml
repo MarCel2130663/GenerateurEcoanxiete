@@ -123,7 +123,7 @@
                </font>
             </Button>
             <VBox alignment="TOP_CENTER" prefHeight="250">
-               <Label text="Temps durant lequel une ampoule restera allumée pour" textFill="#f5d7c6">
+               <Label text="Temps durant lequel une ampoule de 60 W restera allumée pour" textFill="#f5d7c6">
                   <font>
                      <Font name="Trebuchet MS" size="15.0" />
                   </font>

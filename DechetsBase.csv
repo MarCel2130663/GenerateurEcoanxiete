@@ -1,21 +1,21 @@
-Mouchoir ou serviette en papier, 3 mois, file:mouchoir.jpg
-Papier journal, 3 à 12 mois, file:journal.jpg
-Brique de lait, jusqu'à 5 mois, file:lait.jpg
-Carton, 5 mois, file:carton.jpg
-Chewing-gum, 5 ans, file:chewingGum.jpg
-Mégot de cigarette, 1 à 5 ans, file:cigarette.jpg
-Papier de bonbon, 5 ans, file:papierBonbon.jpg
-Boite de conserve, 50 ans, file:conserve.jpg
-Récipient en polystyrène, 50 ans, file:polystyrene.jpg
-Canette, jusqu'à 100 ans, file:canette.jpg
-Pneu, 100 ans, file:pneu.jpg
-Briquet en plastique, 100 ans, file:briquet.jpg
-Pile, 200 ans, file:pile.jpg
-Sac en plastique, 450 ans, file:sacPlastique.jpg
-Masque chirurgical, 400 à 450 ans, file:masque.jpg
-Tampon ou serviette hygiénique, 400 à 450 ans, file:servietteTampon.jpg
-Couche jetable, 400 à 450 ans, file:couche.jpg
-Boite en aluminium, 100 à 500 ans, file:aluminium.jpg
-Bouteille en plastique, 100 à 1000 ans, file:bouteillePlastique.jpg
-Ampoule, plus de 1000 ans, file:ampoule.jpg
-Verre, jusqu'à 5000 ans, file:verre.jpg
+Mouchoir ou serviette en papier, 3 mois, 0.0012, file:mouchoir.jpg
+Papier journal, 3 à 12 mois, 0.0284, file:journal.jpg
+Brique de lait, jusqu'à 5 mois, 0.01, file:lait.jpg
+Carton, 5 mois, 1.25, file:carton.jpg
+Chewing-gum, 5 ans, 0.0042, file:chewingGum.jpg
+Mégot de cigarette, 1 à 5 ans, 0.001, file:cigarette.jpg
+Papier de bonbon, 5 ans, 0.0011, file:papierBonbon.jpg
+Boite de conserve, 50 ans, 0.8, file:conserve.jpg
+Récipient en polystyrène, 0.1513, 50 ans, file:polystyrene.jpg
+Canette, jusqu'à 100 ans, 0.0075, file:canette.jpg
+Pneu, 100 ans, 0.0055, file:pneu.jpg
+Briquet en plastique, 0.157, 100 ans, file:briquet.jpg
+Pile, 200 ans, 0.0173, file:pile.jpg
+Sac en plastique, 450 ans, 0.005, file:sacPlastique.jpg
+Masque chirurgical, 400 à 450 ans, 0.0265, file:masque.jpg
+Tampon ou serviette hygiénique, 400 à 450 ans, 0.004, file:servietteTampon.jpg
+Couche jetable, 400 à 450 ans, 0.004, file:couche.jpg
+Boite en aluminium, 100 à 500 ans, 0.6, file:aluminium.jpg
+Bouteille en plastique, 100 à 1000 ans, 0.03, file:bouteillePlastique.jpg
+Ampoule, plus de 1000 ans, 0.0079, file:ampoule.jpg
+Verre, jusqu'à 5000 ans, 0.6, file:verre.jpg
