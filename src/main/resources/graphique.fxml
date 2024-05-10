@@ -55,7 +55,7 @@
                <CategoryAxis fx:id="axeDate" label="Date" side="BOTTOM"/>
             </xAxis>
             <yAxis>
-               <NumberAxis fx:id="axeNombre" label="Masse de déchets produite" side="LEFT"/>
+               <NumberAxis fx:id="axeMasse" label="Masse de déchets produite" side="LEFT"/>
             </yAxis>
          </BarChart>
       </VBox>

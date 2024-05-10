@@ -40,7 +40,7 @@ public class Dechet {
     }
 
     public String convertirCSV(){
-        return nom + ", " + tempsDesintegration + ", " + image.getUrl() + ", " + date + "\n";
+        return nom + ", " + tempsDesintegration + ", " + masse + ", " + image.getUrl() + ", " + date + "\n";
     }
 
 

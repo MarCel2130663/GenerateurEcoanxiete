@@ -29,9 +29,9 @@ public class Graphique {
     @FXML
     CategoryAxis axeDate = new CategoryAxis();
     @FXML
-    NumberAxis axeNombre = new NumberAxis();
+    NumberAxis axeMasse = new NumberAxis();
     @FXML
-    BarChart<String, Number> barChart = new BarChart<>(axeDate, axeNombre);
+    BarChart<String, Number> barChart = new BarChart<>(axeDate, axeMasse);
     @FXML
     PieChart pieChart;
     @FXML
@@ -59,6 +59,7 @@ public class Graphique {
             }
         }
 
+        //scrollpane
         for(Dechet dechet1 : maPoubelle){
             if(dechet1.getDate().equals(LocalDate.now())){
                 Label label = new Label(dechet1.getNom());
@@ -168,6 +169,7 @@ public class Graphique {
         for(int i = 0; i < j; i++){
             if(!stack2.isEmpty()){
                 DonneeBar c = stack2.pop();
+                System.out.println(c.getDate() + " : " + c.getMasse());
                 serie.getData().addAll(new XYChart.Data(String.valueOf(c.getDate()), c.getMasse()));
             }
         }
