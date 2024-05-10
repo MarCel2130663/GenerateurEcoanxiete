@@ -155,15 +155,11 @@ public class Graphique {
                     stack2.add(a);
                 }
                 else{
-                    stack2.add(a);
-                    stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i), 0));
-                    stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i + 1), 0));
+                    stack.add(new DonneeBar(a.getDate().minusDays(j - i), 0));
                 }
             }
             else{
-                stack2.add(new DonneeBar(LocalDate.now(), 0));
-                stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i), 0));
-                stack.add(new DonneeBar(stack2.peek().getDate().minusDays(j - i + 1), 0));
+                stack.add(new DonneeBar(LocalDate.now(), 0));
             }
         }
         for(int i = 0; i < j; i++){
