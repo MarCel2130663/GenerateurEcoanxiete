@@ -78,16 +78,15 @@ public class Graphique {
                 donneesBar.add(new DonneeBar(dechet2.getDate(), 0));
             }
             //boucle sur les dechetgraphs
-            for (DonneeBar donnee1 : donneesBar) {
-                if (donnee1.getDate().equals(dechet2.getDate())) {
-                    donnee1.setMasse(donnee1.getMasse() + dechet2.getMasse());
+            for (DonneeBar donneeBar : donneesBar) {
+                if (donneeBar.getDate().equals(dechet2.getDate())) {
+                    donneeBar.setMasse(donneeBar.getMasse() + dechet2.getMasse());
                     estTrouve = true;
                 }
-
             }
             //si aucun dechet trouve dans listegraph on ajoute un nouvel element
             if(!estTrouve){
-                donneesBar.add(new DonneeBar(dechet2.getDate(), 1));
+                donneesBar.add(new DonneeBar(dechet2.getDate(), dechet2.getMasse()));
             }
         }
 
@@ -128,12 +127,6 @@ public class Graphique {
         XYChart.Series serie = new XYChart.Series();
         int j = 0;
 
-        if(!stack.isEmpty()){
-            if(!Objects.equals(stack.peek().getDate(), LocalDate.now())){
-                stack.add(new DonneeBar(LocalDate.now(), 0));
-            }
-        }
-
         if(choiceBox.getValue().equals("Semaine")){
             j = 7;
         }
@@ -143,25 +136,30 @@ public class Graphique {
         else if(choiceBox.getValue().equals("Année")){
             j = 365;
         }
-
-        for(int i = 0; i < j; i++){
-            if(!stack.isEmpty()){
-                DonneeBar a = stack.pop();
-                if (!stack.isEmpty()){
-                    DonneeBar b = stack.peek();
-                    if(ChronoUnit.DAYS.between(b.getDate(), a.getDate()) != 1){
-                        stack.add(new DonneeBar(a.getDate().minusDays(1), 0));
-                    }
-                    stack2.add(a);
-                }
-                else{
-                    stack.add(new DonneeBar(a.getDate().minusDays(j - i), 0));
-                }
-            }
-            else{
-                stack.add(new DonneeBar(LocalDate.now(), 0));
-            }
+        //si pas de donnee aujourd'hui ou pile vide
+        if(!Objects.equals(stack.peek().getDate(), LocalDate.now()) || stack.isEmpty()){
+            stack.add(new DonneeBar(LocalDate.now(), 0));
         }
+        //faire tant que pile plus petite que j
+        do{
+            DonneeBar a = stack.pop();
+            if (!stack.isEmpty()){
+                DonneeBar b = stack.peek();
+                //si a et b pas consecutifs
+                if(ChronoUnit.DAYS.between(b.getDate(), a.getDate()) != 1){
+                    stack.add(new DonneeBar(a.getDate().minusDays(1), 0));
+                    stack.add(a);
+                }
+                else
+                    stack2.add(a);
+            }
+            //si pas assez de donnees ajouter la premiere journee affichee
+            else{
+                stack.add(new DonneeBar(a.getDate().minusDays(j - stack2.size() - 1), 0));
+                stack.add(a);
+            }
+        }while(stack2.size() < j);
+
         for(int i = 0; i < j; i++){
             if(!stack2.isEmpty()){
                 DonneeBar c = stack2.pop();

@@ -7,7 +7,7 @@ public class DonneeBar {
     private LocalDate date;
     private float masse;
 
-    public DonneeBar(LocalDate date, int masse){
+    public DonneeBar(LocalDate date, float masse){
         this.date = date;
         this.masse = masse;
     }
