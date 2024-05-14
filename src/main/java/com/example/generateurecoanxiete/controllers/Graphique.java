@@ -38,6 +38,7 @@ public class Graphique {
     VBox dechetsAujourdhui;
     List<Dechet> maPoubelle = new ArrayList<>();
     List<String> poubelleUtilisateur;
+
     {
         try {
             poubelleUtilisateur = Files.readAllLines(Paths.get("PoubelleUtilisateur.csv"));
