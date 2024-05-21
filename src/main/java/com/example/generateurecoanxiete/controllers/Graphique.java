@@ -164,7 +164,6 @@ public class Graphique {
         for(int i = 0; i < j; i++){
             if(!stack2.isEmpty()){
                 DonneeBar c = stack2.pop();
-                System.out.println(c.getDate() + " : " + c.getMasse());
                 serie.getData().addAll(new XYChart.Data(String.valueOf(c.getDate()), c.getMasse()));
             }
         }

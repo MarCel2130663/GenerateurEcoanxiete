@@ -68,7 +68,7 @@
                   <Font name="Trebuchet MS" size="30.0" />
                </font>
             </Label>
-            <Spinner fx:id="spinnerH" editable="true" max="24" min="0" prefHeight="40.0" prefWidth="80.0" />
+            <Spinner fx:id="spinnerH" editable="true" max="23" min="0" prefHeight="40.0" prefWidth="80.0" />
             <Label text="h" textFill="#f5d7c6">
                <font>
                   <Font name="Trebuchet MS" size="30.0" />
